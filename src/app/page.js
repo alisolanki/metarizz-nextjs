@@ -1,95 +1,79 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Header from "./components/(header)/header";
+import HeroSection from "./components/(sections)/(heroSection)/heroSection";
+import DigitalAgencySection from "./components/(sections)/(digitalAgencySection)/digitalAgencySection";
+import ServiceSection from "./components/serviceSection";
+import ProjectsSlider from "./components/(projects)/projectsSlider";
+import PowerSection from "./components/powerSection";
+import Testimonial from "./components/(testimonial)/testimonial";
+import ContactSection from "./components/contactSection";
+import BlogSection from "./components/(sections)/(blogSection)/blogSection";
+import ServiceLineSection from "./components/serviceLineSection";
+import Footer from "./components/(footer)/footer";
+import Image from "next/image";
+import burst_pucker from "../../public/assets/img/icon/burst_pucker.png";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Header />
+      <HeroSection />
+      <DigitalAgencySection />
+      <ServiceSection />
+      {/* <section className="service_line">
+        <div className="line_item">
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
         </div>
-      </div>
+        <div className="line_item two">
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
+          <Image src={burst_pucker} width={100} height={100} alt="" />
+          <h5>We create and develop digital product</h5>
+        </div>
+      </section> */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <ProjectsSlider />
+      <PowerSection />
+      <Testimonial />
+      <ContactSection />
+      <BlogSection />
+      <ServiceLineSection />
+      <Footer />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      {/* <!-- jQuery Libraary --> */}
+      <script src="assets/js/jquery.min.js"></script>
+      {/* <!-- Popper - Js For Bootstrap --> */}
+      <script src="assets/js/popper.min.js"></script>
+      {/* <!-- Bootstrap - jS  --> */}
+      <script src="assets/js/bootstrap.min.js"></script>
+      {/* <!-- Waypoints Js For Counter Up --> */}
+      <script src="assets/js/waypoints.min.js"></script>
+      {/* <!-- Counter Up - Js --> */}
+      <script src="assets/js/jquery.counterup.js"></script>
+      {/* <!-- Magnific Popup -Js --> */}
+      <script src="assets/js/magnific-popup.min.js"></script>
+      {/* <!-- Wow - Js --> */}
+      <script src="assets/js/wow.min.js"></script>
+      {/* <!-- Parallax - Js --> */}
+      <script src="assets/js/parallax.min.js"></script>
+      {/* <!-- Slick-Slidr-js --> */}
+      <script src="assets/js/slick.min.js"></script>
+      {/* <!-- Magnet-mouse --> */}
+      <script src="assets/js/magnet-mouse.min.js"></script>
+      {/* <!-- jquery-ui --> */}
+      <script src="assets/js/jquery-ui.js"></script>
+      {/* <!-- Main Js --> */}
+      <script src="assets/js/main.js"></script>
+    </>
+  );
 }

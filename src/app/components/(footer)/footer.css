@@ -1,0 +1,7 @@
+.custom_footer_logo {
+    width: 200px;
+}
+
+li.mail a:hover {
+    color: var(--red-dark-clr);
+}

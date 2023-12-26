@@ -1,0 +1,25 @@
+#active {
+    color: var(--red-dark-clr);
+}
+
+img.logo {
+    height: 70px;
+    fill: #00ff00 !important;
+    color: #00ff00 !important;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar .container {
+    padding-top: 0;
+}
+
+#active {
+    color: red;
+}
+
+#not-active:hover {
+    color: var(--red-light-clr);
+}
