@@ -5,10 +5,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./projectsSlider.css";
 import Carousel from "react-bootstrap/Carousel";
+import { motion } from 'framer-motion';
 import ItemsData from "../../../../public/Items.json";
 const { items } = ItemsData;
 
 export default function ProjectsSlider() {
+  const fadeInLeftVariants = {
+    initial: { opacity: 0, x: -100 },
+    animate: { opacity: 1, x: 0 },
+  };
+  
+  const fadeInRightVariants = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 0 },
+  };
+
   const { bootstrap } = items;
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
@@ -96,7 +107,7 @@ export default function ProjectsSlider() {
           indicators={true}
           variant="dark"
           className="min_project_slider_two_area"
-        > */}
+          > */}
           {/* <Carousel.Item key={1} interval={3000}>
             <img src="/assets/img/project/5.png" alt="" />
             <Carousel.Caption>
