@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./projectsSlider.css";
 import Carousel from "react-bootstrap/Carousel";
-import { items } from "../../../../public/Items.json";
+import ItemsData from "../../../../public/Items.json";
+const { items } = ItemsData;
 
 export default function ProjectsSlider() {
   const { bootstrap } = items;

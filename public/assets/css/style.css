@@ -776,6 +776,7 @@ a {
   padding-right: 40px;
   margin: 0 7px;
   transition: .3s;
+  min-height: 625px;
 }
 
 .min_service_box_area .single_service_box img {
