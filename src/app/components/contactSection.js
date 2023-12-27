@@ -1,16 +1,27 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
+  const fadeInLeftVariant = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 }
+  };
+
   return (
-    <>
-      {/* <!-- Contact --> */}
-      <section className="contact h_5">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="map_area wow fadeInLeft" data-wow-delay="0.1s">
+    <section className="contact h_5">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              variants={fadeInLeftVariant}
+              className="map_area"
+            >
                 <div className="min_map">
                   <div className="mapouter">
                     <div className="gmap_canvas">
@@ -27,60 +38,78 @@ export default function ContactSection() {
                     <FontAwesomeIcon icon={faLocationDot} />
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="min_contact_area">
-                <div
-                  className="section_title wow fadeInLeft"
-                  data-wow-delay="0.3s"
-                >
-                  <h2>
-                    Have any projects in mind?
-                    <br /> Let’s work <br /> together
-                  </h2>
-                </div>
-                <form action="#" className="contact_form">
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <input
-                        type="text"
-                        className="form-control input wow fadeInLeft"
-                        data-wow-delay="0.5s"
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <input
-                        type="email"
-                        className="form-control input wow fadeInLeft"
-                        data-wow-delay="0.7s"
-                        placeholder="Enter email address"
-                      />
-                    </div>
-                    <div className="col-lg-12">
-                      <textarea
-                        name="massage"
-                        id="massage"
-                        className="form-control input textarea wow fadeInLeft"
-                        data-wow-delay="0.9s"
-                        placeholder="Enter your message"
-                      ></textarea>
-                      <input
-                        type="submit"
-                        className="bg_btn_color wow fadeInLeft"
-                        data-wow-delay="1.1s"
-                        value="Send message"
-                      />
-                    </div>
+                </motion.div>
+          </div>
+          <div className="col-lg-6">
+            <div className="min_contact_area">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                variants={fadeInLeftVariant}
+                className="section_title"
+              >
+                <h2>
+                  Have any projects in mind?
+                  <br /> Let’s work <br /> together
+                </h2>
+              </motion.div>
+              <form action="#" className="contact_form">
+                <div className="row">
+                  <div className="col-lg-6">
+                    <motion.input
+                      type="text"
+                      className="form-control input"
+                      placeholder="Your full name"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.5 }}
+                      variants={fadeInLeftVariant}
+                    />
                   </div>
-                </form>
-              </div>
+                  <div className="col-lg-6">
+                    <motion.input
+                      type="email"
+                      className="form-control input"
+                      placeholder="Enter email address"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.7 }}
+                      variants={fadeInLeftVariant}
+                    />
+                  </div>
+                  <div className="col-lg-12">
+                    <motion.textarea
+                      name="massage"
+                      id="massage"
+                      className="form-control input textarea"
+                      placeholder="Enter your message"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.9 }}
+                      variants={fadeInLeftVariant}
+                    ></motion.textarea>
+                    <motion.input
+                      type="submit"
+                      className="bg_btn_color"
+                      value="Send message"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 1.1 }}
+                      variants={fadeInLeftVariant}
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </section>
-      {/* <!-- Contact --> */}
-    </>
+      </div>
+    </section>
   );
 }
