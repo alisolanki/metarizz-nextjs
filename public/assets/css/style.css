@@ -5201,4 +5201,13 @@ a {
   font-size: 18px;
   line-height: 32px;
 }
+
+.parallax {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroller {
+  display: inline-flex;
+}
 /*# sourceMappingURL=style.css.map */
