@@ -3,6 +3,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import "./heroSection.css";
 
 export default function HeroSection() {
@@ -16,6 +17,18 @@ export default function HeroSection() {
     animate: { opacity: 1, x: 0 },
   };
 
+  const [refOne, inViewOne] = useInView({ threshold: 0.1 });
+  const [refTwo, inViewTwo] = useInView({ threshold: 0.1 });
+  const [refThree, inViewThree] = useInView({ threshold: 0.1 });
+
+  const fadeOutLeft = {
+    exit: { opacity: 0, x: -100 },
+  };
+  
+  const fadeOutRight = {
+    exit: { opacity: 0, x: 100 },
+  };  
+  
   return (
     <>
       <section className="hero_coporate_agency" id="#home">
@@ -65,27 +78,30 @@ export default function HeroSection() {
         <div className="shape_img">
           <motion.img
             src="assets/img/hero/shape/5/1.png"
+            ref={refOne}
             alt=""
             className="one"
-            variants={fadeInLeft}
-            initial="initial"
-            animate="animate"
+            variants={inViewOne ? fadeInLeft : fadeOutLeft}
+            initial="exit"
+            animate={inViewOne ? "animate" : "exit"}
           />
           <motion.img
             src="assets/img/hero/shape/5/2.png"
+            ref={refTwo}
             alt=""
             className="two"
-            variants={fadeInLeft}
-            initial="initial"
-            animate="animate"
+            variants={inViewTwo ? fadeInLeft : fadeOutLeft}
+            initial="exit"
+            animate={inViewTwo ? "animate" : "exit"}
           />
           <motion.img
             src="assets/img/hero/shape/5/3.png"
+            ref={refThree}
             alt=""
             className="three"
-            variants={fadeInRight}
-            initial="initial"
-            animate="animate"
+            variants={inViewThree ? fadeInRight : fadeOutRight}
+            initial="exit"
+            animate={inViewThree ? "animate" : "exit"}
           />
         </div>
       </section>
