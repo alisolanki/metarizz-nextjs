@@ -125,7 +125,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="shape_img">
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.6 }}>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
             <img
               src="assets/img/footer/1.png"
               alt=""
