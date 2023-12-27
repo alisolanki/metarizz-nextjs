@@ -1,3 +1,4 @@
+"use client";
 import Header from "./components/(header)/header";
 import HeroSection from "./components/(sections)/(heroSection)/heroSection";
 import DigitalAgencySection from "./components/(sections)/(digitalAgencySection)/digitalAgencySection";
@@ -11,10 +12,12 @@ import ServiceLineSection from "./components/serviceLineSection";
 import Footer from "./components/(footer)/footer";
 import Image from "next/image";
 import burst_pucker from "../../public/assets/img/icon/burst_pucker.png";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export default function Home() {
   return (
     <>
+      <ParallaxProvider>
       <Header />
       <HeroSection />
       <DigitalAgencySection />
@@ -74,6 +77,7 @@ export default function Home() {
       <script src="assets/js/jquery-ui.js"></script>
       {/* <!-- Main Js --> */}
       <script src="assets/js/main.js"></script>
+      </ParallaxProvider>
     </>
   );
 }

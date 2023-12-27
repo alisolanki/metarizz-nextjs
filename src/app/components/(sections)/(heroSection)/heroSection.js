@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+import { Parallax } from 'react-scroll-parallax';
 import "./heroSection.css";
 
 export default function HeroSection() {
@@ -76,6 +77,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="shape_img">
+          <Parallax scale={[0.9, 1.5, 'linear']}>
           <motion.img
             src="assets/img/hero/shape/5/1.png"
             ref={refOne}
@@ -85,6 +87,8 @@ export default function HeroSection() {
             initial="exit"
             animate={inViewOne ? "animate" : "exit"}
           />
+          </Parallax>
+          <Parallax scale={[0.9, 1.5, 'linear']}>
           <motion.img
             src="assets/img/hero/shape/5/2.png"
             ref={refTwo}
@@ -94,6 +98,8 @@ export default function HeroSection() {
             initial="exit"
             animate={inViewTwo ? "animate" : "exit"}
           />
+          </Parallax>
+          <Parallax scale={[0.9, 1.5, 'linear']}>
           <motion.img
             src="assets/img/hero/shape/5/3.png"
             ref={refThree}
@@ -103,6 +109,7 @@ export default function HeroSection() {
             initial="exit"
             animate={inViewThree ? "animate" : "exit"}
           />
+          </Parallax>
         </div>
       </section>
     </>
