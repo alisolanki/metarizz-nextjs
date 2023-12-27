@@ -21,15 +21,15 @@ export default function ProjectsSlider() {
   };
 
   const fadeInFromLeft = {
-    initial: { opacity: 0, x: -100 },
+    initial: { opacity: 0, x: -50 },
     animate: { opacity: 1, x: 0 },
-    transition: { type: 'spring', stiffness: 100 }
+    transition: { duration: 0.8, delay: 0.1 }
   };
   
   const fadeInFromRight = {
-    initial: { opacity: 0, x: 100 },
+    initial: { opacity: 0, x: 50 },
     animate: { opacity: 1, x: 0 },
-    transition: { type: 'spring', stiffness: 100 }
+    transition: { duration: 0.8, delay: 0.1 }
   };
 
   const { bootstrap } = items;
@@ -349,16 +349,18 @@ export default function ProjectsSlider() {
           src="/assets/img/project/shape/5/1.png"
           alt=""
           className="one"
-          initial="initial"
-          animate="animate"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={fadeInFromLeft}
         />
         <motion.img
           src="/assets/img/project/shape/5/2.png"
           alt=""
           className="two"
-          initial="initial"
-          animate="animate"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={fadeInFromRight}
         />
         </div>
