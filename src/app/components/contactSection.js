@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
@@ -7,6 +7,39 @@ export default function ContactSection() {
   const fadeInLeftVariant = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 }
+  };
+
+  //code to send data of form to Notion Page via API
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Post data to the API
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+    
+    // Handle response here
+    const data = await response.json();
+    if (response.ok) {
+      // Handle success
+      alert('Form submitted successfully', data);
+    } else {
+      // Handle error
+      alert('Form submission error', data);
+    }
   };
 
   return (
@@ -55,11 +88,14 @@ export default function ContactSection() {
                   <br /> Let’s work <br /> together
                 </h2>
               </motion.div>
-              <form action="#" className="contact_form">
+              <form onSubmit={handleSubmit} className="contact_form">
                 <div className="row">
                   <div className="col-lg-6">
                     <motion.input
                       type="text"
+                      name="name" 
+                      value={formData.name}
+                      onChange={handleChange}
                       className="form-control input"
                       placeholder="Your full name"
                       initial="hidden"
@@ -72,6 +108,9 @@ export default function ContactSection() {
                   <div className="col-lg-6">
                     <motion.input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="form-control input"
                       placeholder="Enter email address"
                       initial="hidden"
@@ -83,8 +122,10 @@ export default function ContactSection() {
                   </div>
                   <div className="col-lg-12">
                     <motion.textarea
-                      name="massage"
-                      id="massage"
+                      name="message"
+                      id="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       className="form-control input textarea"
                       placeholder="Enter your message"
                       initial="hidden"
