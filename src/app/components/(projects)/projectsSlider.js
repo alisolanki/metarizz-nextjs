@@ -20,6 +20,18 @@ export default function ProjectsSlider() {
     animate: { opacity: 1, x: 0 },
   };
 
+  const fadeInFromLeft = {
+    initial: { opacity: 0, x: -100 },
+    animate: { opacity: 1, x: 0 },
+    transition: { type: 'spring', stiffness: 100 }
+  };
+  
+  const fadeInFromRight = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 0 },
+    transition: { type: 'spring', stiffness: 100 }
+  };
+
   const { bootstrap } = items;
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
@@ -33,21 +45,32 @@ export default function ProjectsSlider() {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="section_title">
-                <h2 className="wow fadeInLeft" data-wow-delay="0.3s">
-                  Explore some <br />
-                  amazing projects
-                </h2>
+              <motion.h2
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                variants={fadeInLeftVariants}
+                className="section_title"
+              >
+                Explore some <br />
+                amazing projects
+              </motion.h2>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="project_slider_btn">
-                <a
-                  href="portfolio-2-column.html"
-                  className="bg_btn wow fadeInLeft"
-                  data-wow-delay="0.5s"
-                >
-                  View all projects
-                </a>
+              <motion.a
+                href="portfolio-2-column.html"
+                className="bg_btn"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                variants={fadeInLeftVariants}
+              >
+                View all projects <FontAwesomeIcon icon={faArrowRight} />
+              </motion.a>
               </div>
             </div>
           </div>
@@ -62,9 +85,14 @@ export default function ProjectsSlider() {
             <Carousel.Item
               key={item.id}
               interval={3000}
-              className="single_project_slider_two wow fadeInLeft"
             >
-              <div className="project_top">
+              <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInLeftVariants}
+                  className="single_project_slider_two"
+                >
                 <img
                   src="/assets/img/medinobel.png"
                   alt=""
@@ -87,7 +115,7 @@ export default function ProjectsSlider() {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </motion.div>
               <div className="project_bottom">
                 <h4>
                   <a href="portfolio-single.html">
@@ -317,8 +345,22 @@ export default function ProjectsSlider() {
         </div> */}
         {/* </Flickity> */}
         <div className="shape_img">
-          <img src="/assets/img/project/shape/5/1.png" alt="" className="one" />
-          <img src="/assets/img/project/shape/5/2.png" alt="" className="two" />
+        <motion.img
+          src="/assets/img/project/shape/5/1.png"
+          alt=""
+          className="one"
+          initial="initial"
+          animate="animate"
+          variants={fadeInFromLeft}
+        />
+        <motion.img
+          src="/assets/img/project/shape/5/2.png"
+          alt=""
+          className="two"
+          initial="initial"
+          animate="animate"
+          variants={fadeInFromRight}
+        />
         </div>
       </section>
       {/* <!-- Project Slider Two --> */}
