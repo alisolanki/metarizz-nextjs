@@ -4,7 +4,7 @@ import Head from "next/head";
 // CSS imports
 import "../../public/assets/css/responsive.css";
 import "../../public/assets/css/style.css";
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>;
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" async></script>;
 
 // Plugins
 import "../../public/assets/css/plugins/slick-slider/slick.css";
