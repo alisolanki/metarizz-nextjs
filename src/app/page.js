@@ -13,11 +13,14 @@ import Footer from "./components/(footer)/footer";
 import Image from "next/image";
 import burst_pucker from "../../public/assets/img/icon/burst_pucker.png";
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { GoogleTagManager } from '@next/third-parties/google';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 export default function Home() {
   return (
     <>
       <ParallaxProvider>
+      <GoogleTagManager gtmId="GTM-PVX39Z5" />
       <Header />
       <HeroSection />
       <DigitalAgencySection />
