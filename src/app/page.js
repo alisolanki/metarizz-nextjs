@@ -48,13 +48,13 @@ export default function Home() {
         </div>
       </section> */}
 
-      <ProjectsSlider />
+      {/* <ProjectsSlider />
       <PowerSection />
       <Testimonial />
       <ContactSection />
       <BlogSection />
       <ServiceLineSection />
-      <Footer />
+      <Footer /> */}
 
       {/* <!-- jQuery Libraary --> */}
       <script src="assets/js/jquery.min.js"></script>
