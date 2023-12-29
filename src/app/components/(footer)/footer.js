@@ -16,14 +16,13 @@ export default function Footer() {
   return (
     <>
       {/* <!-- Footer --> */}
-      <footer className="footer" data-bg-color="#D9E0DD">
+      <footer className="footer">
         <div className="container">
           <div className="main_footer">
             <div className="row">
               <div className="col-xl-5 col-md-6">
                 <div
-                  className="site_info logo_area wow fadeInLeft"
-                  data-wow-delay="0.3s"
+                  className="site_info logo_area"
                 >
                   <img
                     src="assets/img/logo/metarizz_logo.svg"
@@ -48,7 +47,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="col-xl-3 col-md-6 mid">
-                <div className="site_info wow fadeInLeft" data-wow-delay="0.5s">
+                <div className="site_info" >
                   <h5>Contact info</h5>
                   <ul className="loc_list list-unstyled">
                     <li>Mumbai, Bengaluru, Ahmedabad</li>
@@ -67,7 +66,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="col-xl-4 col-md-6 last">
-                <div className="site_info wow fadeInLeft" data-wow-delay="0.7s">
+                <div className="site_info" >
                   <h5>Subscribe newsletter</h5>
                   <form action="#" className="subscribe_form">
                     <input
@@ -85,7 +84,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="footer_bottom wow fadeInLeft" data-wow-delay="0.9s">
+          <div className="footer_bottom" >
             <div className="footer_bottom_list">
               <div className="row">
                 <div className="col-xl-6">
@@ -129,20 +128,17 @@ export default function Footer() {
             <img
               src="assets/img/footer/1.png"
               alt=""
-              className="one wow fadeInLeft"
-              data-wow-delay="1.3s"
+              className="one"
             />
             <img
               src="assets/img/footer/2.png"
               alt=""
-              className="two wow fadeInLeft"
-              data-wow-delay="1.1s"
+              className="two "
             />
             <img
               src="assets/img/footer/3.png"
               alt=""
-              className="three wow fadeInLeft"
-              data-wow-delay="0.1s"
+              className="three"
             />
           </motion.div>
         </div>

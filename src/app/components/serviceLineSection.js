@@ -1,7 +1,16 @@
-"use client";
-import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform, useMotionValue, useAnimationFrame, useVelocity } from "framer-motion";
-import { wrap } from "@motionone/utils";
+'use client';
+import React, { useRef } from 'react';
+import Image from 'next/image';
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useAnimationFrame,
+  useVelocity
+} from 'framer-motion';
+import { wrap } from '@motionone/utils';
 
 function ParallaxText({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
@@ -32,8 +41,8 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   });
 
   return (
-    <div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
+    <div className='parallax'>
+      <motion.div className='scroller' style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
@@ -44,28 +53,44 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 }
 export default function ServiceLineSection() {
   return (
-    <section className="service_line h_3">
-      <div className="line_item" data-bg-color="#A6D8B5">
-      <h5>
-      <ParallaxText baseVelocity={-5}>
-      <img src="assets/img/icon/burst_pucker.png" alt="" />We create and develop digital product
-      </ParallaxText>
-      </h5>
-      <h5>
-      <ParallaxText baseVelocity={5}>
-      <img src="assets/img/icon/burst_pucker.png" alt="" />We create and develop digital product
-      </ParallaxText>
-      </h5>
-      <h5>
-      <ParallaxText baseVelocity={-5}>
-      <img src="assets/img/icon/burst_pucker.png" alt="" />We create and develop digital product
-      </ParallaxText>
-      </h5>
-      <h5>
-      <ParallaxText baseVelocity={5}>
-      <img src="assets/img/icon/burst_pucker.png" alt="" />We create and develop digital product
-      </ParallaxText>
-      </h5>
+    <section className='service_line h_3'>
+      <div className='line_item'>
+        <ParallaxText baseVelocity={-5}>
+          <Image
+            src='/assets/img/icon/burst_pucker.png'
+            alt=''
+            width={100}
+            height={100}
+          />
+          <h5>We create and develop digital product</h5>
+        </ParallaxText>
+        <ParallaxText baseVelocity={5}>
+          <Image
+            src='/assets/img/icon/burst_pucker.png'
+            alt=''
+            width={100}
+            height={100}
+          />
+          <h5>We create and develop digital product</h5>
+        </ParallaxText>
+        <ParallaxText baseVelocity={-5}>
+          <Image
+            src='/assets/img/icon/burst_pucker.png'
+            alt=''
+            width={100}
+            height={100}
+          />
+          <h5>We create and develop digital product</h5>
+        </ParallaxText>
+        <ParallaxText baseVelocity={5}>
+          <Image
+            src='/assets/img/icon/burst_pucker.png'
+            alt=''
+            width={100}
+            height={100}
+          />
+          <h5>We create and develop digital product</h5>
+        </ParallaxText>
       </div>
     </section>
   );
