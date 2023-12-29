@@ -22,9 +22,9 @@ export default function Testimonial() {
             <div className="single_testimonial">
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
-                "We’ve worked with multiple agencies in the past but they could
+              &quot;We’ve worked with multiple agencies in the past but they could
                 never match the quality we got here. Thanks Ali for the
-                excellent communication throughout the process!"
+                excellent communication throughout the process!&quot;
               </p>
               <div className="testimonial_people">
                 <span className="name">Namita</span>
@@ -35,8 +35,8 @@ export default function Testimonial() {
             <div className="single_testimonial">
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
-                "Smooth communication, great work, and a very professional
-                team!"
+              &quot;Smooth communication, great work, and a very professional
+                team!&quot;
               </p>
               <div className="testimonial_people">
                 <span className="name">Irina</span>

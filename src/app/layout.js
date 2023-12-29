@@ -22,6 +22,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@fortawesome/react-fontawesome";
 import "@fortawesome/free-brands-svg-icons";
 import { config } from "@fortawesome/fontawesome-svg-core";
+
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -80,6 +81,10 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={inter.className} data-scroll-animation="false">
         {children}
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVX39Z5"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
       </body>
     </html>
   );
