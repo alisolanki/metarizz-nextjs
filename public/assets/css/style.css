@@ -410,6 +410,7 @@ a {
   padding-bottom: 210px;
   position: relative;
   background-color: var(--green-lightest-clr);
+  overflow: hidden;
 }
 
 .hero_coporate_agency .content {
@@ -442,16 +443,19 @@ a {
 .hero_coporate_agency .shape_img .one {
   left: 100px;
   bottom: 300px;
+  z-index: -100;
 }
 
 .hero_coporate_agency .shape_img .two {
-  bottom: 0;
+  top: 20px;
   right: 230px;
+  z-index: -100;
 }
 
 .hero_coporate_agency .shape_img .three {
-  right: 0;
-  top: 155px;
+  bottom: 200px;
+  right: 0px;
+  z-index: -100;
 }
 
 .hero_agenct_portfolio {
@@ -776,6 +780,7 @@ a {
   padding-right: 40px;
   margin: 0 7px;
   transition: .3s;
+  min-height: 625px;
 }
 
 .min_service_box_area .single_service_box img {
@@ -5195,5 +5200,14 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
+}
+
+.parallax {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroller {
+  display: inline-flex;
 }
 /*# sourceMappingURL=style.css.map */

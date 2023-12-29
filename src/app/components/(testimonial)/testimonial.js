@@ -1,4 +1,16 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInRightVariant = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const fadeInLeftVariant = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 }
+};
 
 export default function Testimonial() {
   return (
@@ -10,9 +22,9 @@ export default function Testimonial() {
             <div className="single_testimonial">
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
-                "We’ve worked with multiple agencies in the past but they could
+              &quot;We’ve worked with multiple agencies in the past but they could
                 never match the quality we got here. Thanks Ali for the
-                excellent communication throughout the process!"
+                excellent communication throughout the process!&quot;
               </p>
               <div className="testimonial_people">
                 <span className="name">Namita</span>
@@ -23,8 +35,8 @@ export default function Testimonial() {
             <div className="single_testimonial">
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
-                "Smooth communication, great work, and a very professional
-                team!"
+              &quot;Smooth communication, great work, and a very professional
+                team!&quot;
               </p>
               <div className="testimonial_people">
                 <span className="name">Irina</span>
@@ -35,18 +47,26 @@ export default function Testimonial() {
           </div>
         </div>
         <div className="shape_img">
-          <img
-            src="assets/img/testimonial/shape/1.png"
-            alt=""
-            className="one wow fadeInRight"
-            data-wow-delay="0.1s"
-          />
-          <img
-            src="assets/img/testimonial/shape/2.png"
-            alt=""
-            className="two wow fadeInLeft"
-            data-wow-delay="0.3s"
-          />
+          <motion.img
+              src="assets/img/testimonial/shape/1.png"
+              alt=""
+              className="one"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInRightVariant}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            />
+          <motion.img
+              src="assets/img/testimonial/shape/2.png"
+              alt=""
+              className="two"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInLeftVariant}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            />
         </div>
       </section>
       {/* <!-- Testimonial --> */}

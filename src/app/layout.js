@@ -4,7 +4,7 @@ import Head from "next/head";
 // CSS imports
 import "../../public/assets/css/responsive.css";
 import "../../public/assets/css/style.css";
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>;
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" async></script>;
 
 // Plugins
 import "../../public/assets/css/plugins/slick-slider/slick.css";
@@ -22,6 +22,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@fortawesome/react-fontawesome";
 import "@fortawesome/free-brands-svg-icons";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { GoogleTagManager } from '@next/third-parties/google'
+
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -81,6 +83,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className} data-scroll-animation="false">
         {children}
       </body>
+      <GoogleTagManager gtmId="GTM-PVX39Z5" />
     </html>
   );
 }
