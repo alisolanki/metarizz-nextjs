@@ -1,5 +1,5 @@
 'use client';
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
@@ -29,13 +29,46 @@ export default function HeroSection() {
   const fadeOutRight = {
     exit: { opacity: 0, x: 100 },
   };  
+
+  // Mini form state and handlers
+  const [miniFormData, setMiniFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    phoneNumber: '',
+    budget: ''
+  });
+
+  const handleMiniFormChange = (e) => {
+    setMiniFormData({ ...miniFormData, [e.target.name]: e.target.value });
+  };
+
+  const handleMiniFormSubmit = async (e) => {
+    e.preventDefault();
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(miniFormData),
+    });
+    
+    const data = await response.json();
+    if (response.ok) {
+      // Handle success
+      alert('Form submitted successfully', data);
+    } else {
+      // Handle error
+      alert('Form submission error', data);
+    }
+  };
   
   return (
     <>
       <section className="hero_coporate_agency" id="#home">
         <div className="container">
-          <div className="content">
-            <div className="section_title">
+          <div className="content" style={{ display: 'flex'}}>
+            <div className="section_title" style={{ textAlign: 'left', width: '50%'}}>
               <motion.h1
                 className="hero_title"
                 variants={fadeInLeft}
@@ -74,6 +107,109 @@ export default function HeroSection() {
                 Contact Us <FontAwesomeIcon icon={faArrowRight} />
               </motion.a>
             </div>
+            {/* Mini Form */}
+          <div className="min_contact_area" style={{ width: '50%', paddingLeft: '20px' }}>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                variants={fadeInRight}
+                className="section_title"
+              >
+                <h2>
+                Let’s work together
+                </h2>
+              </motion.div>
+            <form onSubmit={handleMiniFormSubmit} className="hero_mini_form">
+              <motion.input
+                type="text"
+                name="name"
+                value={miniFormData.name}
+                onChange={handleMiniFormChange}
+                className="form-control input"
+                placeholder="Your full name"
+                style={{ marginBottom: '10px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                variants={fadeInRight}
+              />
+              <motion.input
+                type="email"
+                name="email"
+                value={miniFormData.email}
+                onChange={handleMiniFormChange}
+                className="form-control input"
+                placeholder="Email address"
+                style={{ marginBottom: '10px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                variants={fadeInRight}
+              />
+              <motion.input
+                type="tel"
+                name="phoneNumber"
+                value={miniFormData.phoneNumber}
+                onChange={handleMiniFormChange}
+                className="form-control input"
+                placeholder="Phone Number"
+                style={{ marginBottom: '10px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                variants={fadeInRight}
+              />
+              <motion.select
+                name="budget"
+                value={miniFormData.budget}
+                onChange={handleMiniFormChange}
+                className="form-control input"
+                style={{ marginBottom: '10px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                variants={fadeInRight}
+              >
+                <option value="">Select Budget</option>
+                <option value="10000+">$10000+</option>
+                <option value="5000-10000">$5000 to $10000</option>
+                <option value="2500-5000">$2500 to $5000</option>
+                <option value="1500-2500">$1500 to $2500</option>
+                <option value="1000-1500">$1000 to $1500</option>
+                <option value="0-1000">$0 to $1000</option>
+              </motion.select>
+              <motion.textarea
+                name="message"
+                value={miniFormData.message}
+                onChange={handleMiniFormChange}
+                className="form-control input textarea"
+                placeholder="Enter Your Requirement"
+                rows="3"
+                style={{ marginBottom: '10px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                variants={fadeInRight}
+              ></motion.textarea>
+              <motion.input
+                type="submit"
+                className="bg_btn_color"
+                value="Send Message"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                variants={fadeInRight}
+              />
+            </form>
+          </div>
           </div>
         </div>
         <div className="shape_img">

@@ -24,7 +24,6 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Post data to the API
     const response = await fetch('/api/submit', {
       method: 'POST',
       headers: {
@@ -33,7 +32,6 @@ export default function ContactSection() {
       body: JSON.stringify(formData),
     });
     
-    // Handle response here
     const data = await response.json();
     if (response.ok) {
       // Handle success
