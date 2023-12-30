@@ -121,7 +121,8 @@ export default function HeroSection() {
                 Let’s work together
                 </h2>
               </motion.div>
-            <form onSubmit={handleMiniFormSubmit} className="hero_mini_form">
+            <form onSubmit={handleMiniFormSubmit} className="contact_form">
+            <div className="row">
               <motion.input
                 type="text"
                 name="name"
@@ -208,6 +209,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 variants={fadeInRight}
               />
+              </div>
             </form>
           </div>
           </div>
