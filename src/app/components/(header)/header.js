@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import NavbarItem from "./navbarItem";
+import Link from 'next/link'
 import "./header.css";
 
 export default function Header() {
@@ -41,9 +42,9 @@ export default function Header() {
                 <NavbarItem name="Blog" active={false} />
               </ul>
               <div className="nav_buttons">
-                <a href="contact.html" className="contact_btn">
+                <Link href="#contact-section" className="contact_btn">
                   Contact us
-                </a>
+                </Link>
               </div>
             </div>
           </div>

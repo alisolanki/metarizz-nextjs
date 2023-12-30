@@ -97,7 +97,7 @@ export default function HeroSection() {
                 We design, develop, market to rizz up your digital presence.
               </motion.p>
               <motion.a
-                href="#contact-us"
+                href="#contact-section"
                 className="bg_btn"
                 variants={fadeInLeft}
                 initial="initial"

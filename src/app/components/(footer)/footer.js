@@ -35,13 +35,13 @@ export default function Footer() {
                     clients. Contact us for more information.
                   </p>
                   <div className="social_icons">
-                    <a href="https://twitter.com/">
+                    <a href="https://twitter.com/alisolankii">
                       <FontAwesomeIcon icon={faXTwitter} />
                     </a>
-                    <a href="https://instagram.com/meta.rizz">
+                    <a href="https://www.instagram.com/meta.rizz/">
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
-                    <a href="https://bd.linkedin.com/">
+                    <a href="https://linkedin.com/in/alisolanki">
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
                   </div>
@@ -103,7 +103,7 @@ export default function Footer() {
                       <a href="service.html">Services</a>
                     </li>
                     <li>
-                      <a href="contact.html">contact us</a>
+                      <a href="#contact-section">contact us</a>
                     </li>
                   </ul>
                 </div>

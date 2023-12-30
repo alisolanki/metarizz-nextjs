@@ -43,7 +43,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="contact h_5">
+    <section className="contact h_5" id="contact-section">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">

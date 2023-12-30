@@ -49,7 +49,7 @@ export default function DigitalAgencySection() {
                   </li>
                 </ul>
                 <a
-                  href="contact.html"
+                  href="#contact-section"
                   className="bg_btn_color wow fadeInLeft"
                   data-wow-delay="1.3s"
                 >
