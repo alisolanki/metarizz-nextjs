@@ -8,7 +8,6 @@ import Carousel from "react-bootstrap/Carousel";
 import { motion } from 'framer-motion';
 import ItemsData from "../../../../public/Items.json";
 const { items } = ItemsData;
-import ProjectItem from "./ProjectItem"; //Custom component for re-use
 
 //Define all projects data hard-code in this constant projectsData
 const projectsData = [
