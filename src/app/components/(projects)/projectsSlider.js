@@ -7,13 +7,14 @@ import "./projectsSlider.css";
 import Carousel from "react-bootstrap/Carousel";
 import { motion } from 'framer-motion';
 import ItemsData from "../../../../public/Items.json";
+import ProjectItem from "./projectItem";
 const { items } = ItemsData;
 
 //Define all projects data hard-code in this constant projectsData
 const projectsData = [
   {
     id: 1,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/tokenwale.png",
     title: "TokenWale",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://www.tokenwale.in/",
@@ -21,7 +22,7 @@ const projectsData = [
   },
   {
     id: 2,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/imbuzi.png",
     title: "Imbuzi Ecom Fashion Brand",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
@@ -36,70 +37,70 @@ const projectsData = [
     description: "Patient Doctor Appointment App"
   },{
     id: 4,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/get_in_guestlist.png",
     title: "GuestInMe Club App",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "Nightlife Aggregator Platform"
   },{
     id: 5,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/show_world_film_directory.png",
     title: "Show World Film Directory",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "A directory of professionals from entertainment industry"
   },{
     id: 6,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/the_stripe_nft.png",
     title: "The Stripes NFT",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "The Stripes NFT minting Dapp"
   },{
     id: 7,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/vega.png",
     title: "Vega Auto Website",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "Motor gear brand"
   },{
     id: 8,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/watermelon_gang.png",
     title: "Watermelon Gang Creative Agency Website",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "An exceptional marketing agency"
   },{
     id: 9,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/edtech_platform.png",
     title: "Ed-tech Platform",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "Hands-on Courses"
   },{
     id: 10,
-    image: "/assets/img/medinobel.png",
-    title: "Imbuzi Ecom Fashion Brand",
+    image: "/assets/img/kasu_loyalty.png",
+    title: "Kasu Loyalty",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
-    description: "Premium Fashion Ecommerce brand"
+    description: "Blockchain based loyalty program through $KASU tokens"
   },{
     id: 11,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/helper_ai.png",
     title: "Helper AI Chrome Extension",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "Chrome Extension"
   },{
     id: 12,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/kart_racing_league.png",
     title: "Kart Racing League Website",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
     description: "Blockchain game"
   },{
     id: 13,
-    image: "/assets/img/medinobel.png",
+    image: "/assets/img/typer_ai.png",
     title: "Typer AI webapp",
     tags: ["Branding", "UI/UX", "Development"],
     url: "https://imbuzi.in/",
