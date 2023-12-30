@@ -3,7 +3,7 @@ import { Client } from "@notionhq/client";
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      const { name, email, message } = req.body;
+      const { name, email, message, phoneNumber, budget } = req.body;
 
       // Initialize the Notion client
       const notion = new Client({ auth: process.env.NOTION_API_KEY });
@@ -29,6 +29,18 @@ export default async function handler(req, res) {
                 text: { content: message } 
               }
             ]
+          },
+          'Phone Number': { // Added the phone number property
+            rich_text: [
+              {
+                text: { content: phoneNumber }
+              }
+            ]
+          },
+          'Budget': { // Added the budget property
+            select: {
+              name: budget
+            }
           }}
       });
 
