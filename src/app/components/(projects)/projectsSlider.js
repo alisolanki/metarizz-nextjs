@@ -8,6 +8,106 @@ import Carousel from "react-bootstrap/Carousel";
 import { motion } from 'framer-motion';
 import ItemsData from "../../../../public/Items.json";
 const { items } = ItemsData;
+import ProjectItem from "./ProjectItem"; //Custom component for re-use
+
+//Define all projects data hard-code in this constant projectsData
+const projectsData = [
+  {
+    id: 1,
+    image: "/assets/img/medinobel.png",
+    title: "TokenWale",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://www.tokenwale.in/",
+    description: "Crypto Project"
+  },
+  {
+    id: 2,
+    image: "/assets/img/medinobel.png",
+    title: "Imbuzi Ecom Fashion Brand",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Premium Fashion Ecommerce brand"
+  },
+  {
+    id: 3,
+    image: "/assets/img/medinobel.png",
+    title: "Medinobel",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Patient Doctor Appointment App"
+  },{
+    id: 4,
+    image: "/assets/img/medinobel.png",
+    title: "GuestInMe Club App",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Nightlife Aggregator Platform"
+  },{
+    id: 5,
+    image: "/assets/img/medinobel.png",
+    title: "Show World Film Directory",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "A directory of professionals from entertainment industry"
+  },{
+    id: 6,
+    image: "/assets/img/medinobel.png",
+    title: "The Stripes NFT",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "The Stripes NFT minting Dapp"
+  },{
+    id: 7,
+    image: "/assets/img/medinobel.png",
+    title: "Vega Auto Website",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Motor gear brand"
+  },{
+    id: 8,
+    image: "/assets/img/medinobel.png",
+    title: "Watermelon Gang Creative Agency Website",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "An exceptional marketing agency"
+  },{
+    id: 9,
+    image: "/assets/img/medinobel.png",
+    title: "Ed-tech Platform",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Hands-on Courses"
+  },{
+    id: 10,
+    image: "/assets/img/medinobel.png",
+    title: "Imbuzi Ecom Fashion Brand",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Premium Fashion Ecommerce brand"
+  },{
+    id: 11,
+    image: "/assets/img/medinobel.png",
+    title: "Helper AI Chrome Extension",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Chrome Extension"
+  },{
+    id: 12,
+    image: "/assets/img/medinobel.png",
+    title: "Kart Racing League Website",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Blockchain game"
+  },{
+    id: 13,
+    image: "/assets/img/medinobel.png",
+    title: "Typer AI webapp",
+    tags: ["Branding", "UI/UX", "Development"],
+    url: "https://imbuzi.in/",
+    description: "Webapp"
+  },
+  // ... other projects to be added here ...
+];
 
 export default function ProjectsSlider() {
   const fadeInLeftVariants = {
@@ -81,7 +181,14 @@ export default function ProjectsSlider() {
           onSelect={handleSelect}
           className="custom_carousel"
         >
-          {bootstrap.map((item) => (
+          {projectsData.map((project) => (
+            <Carousel.Item key={project.id} interval={3000}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInLeftVariants}>
+                <ProjectItem {...project} />
+              </motion.div>
+            </Carousel.Item>
+          ))}
+          {/* {bootstrap.map((item) => (
             <Carousel.Item
               key={item.id}
               interval={3000}
@@ -128,7 +235,7 @@ export default function ProjectsSlider() {
                 </a>
               </div>
             </Carousel.Item>
-          ))}
+          ))} */} {/*Commented from top till here*/}
           {/* </Carousel> */}
 
           {/* <Carousel
