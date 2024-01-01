@@ -142,7 +142,7 @@ export default function ProjectsSlider() {
       {/* <!-- Project Slider Two --> */}
       <section className="project_slider_two" id="projects-section">
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row cstm_projectsslider_title_button align-items-center">
             <div className="col-lg-6">
               <div className="section_title">
               <motion.h2
@@ -159,7 +159,7 @@ export default function ProjectsSlider() {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="project_slider_btn">
+              <div className="project_slider_btn cstm_projectsslider_title_button_inside">
               <motion.a
                 href="#contact-section"
                 className="bg_btn"

@@ -97,3 +97,14 @@
     padding: 5px 15px;
   }
 }
+
+@media(max-width: 414px){
+  .cstm_projectsslider_title_button{
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .cstm_projectsslider_title_button_inside{
+    text-align: center !important;
+  }
+}
