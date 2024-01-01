@@ -160,6 +160,8 @@ export default function HeroSection() {
                 animate="animate"
                 transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
+                pattern="^\+\d+\s*\d+$"
+                title="Please enter a valid phone number with country code e.g. +91 7218271556"
               />
               <motion.select
                 name="budget"
