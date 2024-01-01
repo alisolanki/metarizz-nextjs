@@ -3711,6 +3711,38 @@ a {
   align-self: center;
 }
 
+/*Hero Section Contact form dropdown styling */
+.min_contact_area .contact_form_hero select {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid var(--black-clr);
+  background-color: white;
+  color: var(--black-clr);
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+
+.min_contact_area .contact_form_hero select:focus {
+  outline: none;
+  border-color: var(--black-clr);
+}
+
+.min_contact_area .contact_form_hero option {
+  color: var(--black-clr);
+  background-color: var(--green-lightest-clr);
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .min_contact_area .contact_form_hero select {
+    width: 100%;
+  }
+}
+
 .contact.h_5 {
   padding-top: 160px;
 }
