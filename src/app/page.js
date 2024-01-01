@@ -52,8 +52,8 @@ export default function Home() {
       <PowerSection />
       <Testimonial />
       <ContactSection />
-      <BlogSection />
-      <ServiceLineSection />
+      {/* <BlogSection /> */}
+      {/* <ServiceLineSection /> */}
       <Footer />
 
       {/* <!-- jQuery Libraary --> */}

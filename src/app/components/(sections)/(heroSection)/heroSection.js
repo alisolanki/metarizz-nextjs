@@ -207,7 +207,7 @@ export default function HeroSection() {
           </div>
           </div>
         </div>
-        <div className="shape_img">
+        {/* <div className="shape_img">
           <Parallax scale={[0.9, 1.5, 'linear']}>
           <motion.img
             src="assets/img/hero/shape/5/1.png"
@@ -241,7 +241,7 @@ export default function HeroSection() {
             animate={inViewThree ? "animate" : "exit"}
           />
           </Parallax>
-        </div>
+        </div> */}
       </section>
     </>
   );

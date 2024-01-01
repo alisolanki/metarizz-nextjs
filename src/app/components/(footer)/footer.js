@@ -69,7 +69,7 @@ export default function Footer() {
               <div className="col-xl-4 col-md-6 last">
                 <div className="site_info wow fadeInLeft" data-wow-delay="0.7s">
                   <h5>Subscribe newsletter</h5>
-                  <form action="#" className="subscribe_form">
+                  <form action="#contact-section" className="subscribe_form">
                     <input
                       type="email"
                       className="form-control"

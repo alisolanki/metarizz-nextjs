@@ -46,7 +46,7 @@ export default function Testimonial() {
             </div>
           </div>
         </div>
-        <div className="shape_img">
+        {/* <div className="shape_img">
           <motion.img
               src="assets/img/testimonial/shape/1.png"
               alt=""
@@ -67,7 +67,7 @@ export default function Testimonial() {
               variants={fadeInLeftVariant}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
-        </div>
+        </div> */}
       </section>
       {/* <!-- Testimonial --> */}
     </>

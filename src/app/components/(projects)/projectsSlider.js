@@ -40,14 +40,14 @@ const projectsData = [
     image: "/assets/img/get_in_guestlist.png",
     title: "GuestInMe Club App",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://play.google.com/store/apps/details?id=com.guestinme.guestinme",
     description: "Nightlife Aggregator Platform"
   },{
     id: 5,
     image: "/assets/img/show_world_film_directory.png",
     title: "Show World Film Directory",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://play.google.com/store/apps/details?id=com.showworld.showworldfilmdirectory&hl=en_IN&gl=US",
     description: "A directory of professionals from entertainment industry"
   },{
     id: 6,
@@ -161,7 +161,7 @@ export default function ProjectsSlider() {
             <div className="col-lg-6">
               <div className="project_slider_btn">
               <motion.a
-                href="portfolio-2-column.html"
+                href="#contact-section"
                 className="bg_btn"
                 initial="hidden"
                 whileInView="visible"
@@ -451,7 +451,7 @@ export default function ProjectsSlider() {
           </div>
         </div> */}
         {/* </Flickity> */}
-        <div className="shape_img">
+        {/* <div className="shape_img">
         <motion.img
           src="/assets/img/project/shape/5/1.png"
           alt=""
@@ -470,7 +470,7 @@ export default function ProjectsSlider() {
           viewport={{ once: true }}
           variants={fadeInFromRight}
         />
-        </div>
+        </div> */}
       </section>
       {/* <!-- Project Slider Two --> */}
     </>

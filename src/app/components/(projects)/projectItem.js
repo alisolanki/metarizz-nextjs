@@ -6,13 +6,13 @@ const ProjectItem = ({ id, image, title, tags, url, description }) => {
   return (
     <div className="single_project_slider_two" key={id}>
       <img src={image} alt={title} className="carousel_img" />
-      <ul className="list-unstyled custom_carousel_list">
+      {/* <ul className="list-unstyled custom_carousel_list">
         {tags.map((tag, index) => (
           <li key={index}>
             <span className="tag_btn">{tag}</span>
           </li>
         ))}
-      </ul>
+      </ul> */}
       <div className="project_bottom">
         <h2>
           <a href={url}>{title}</a>
