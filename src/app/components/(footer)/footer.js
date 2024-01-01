@@ -18,11 +18,11 @@ export default function Footer() {
       {/* <!-- Footer --> */}
       <footer className="footer" data-bg-color="#D9E0DD">
         <div className="container">
-          <div className="main_footer">
+          <div className="main_footer cstm_main_footer_mob">
             <div className="row">
               <div className="col-xl-5 col-md-6">
                 <div
-                  className="site_info logo_area wow fadeInLeft"
+                  className="site_info logo_area cstm_site_info_logo_area_414px wow fadeInLeft"
                   data-wow-delay="0.3s"
                 >
                   <img
@@ -34,7 +34,7 @@ export default function Footer() {
                     We are focused on providing the best digital services to our
                     clients. Contact us for more information.
                   </p>
-                  <div className="social_icons">
+                  <div className="social_icons cstm_social_icons_414px">
                     <a href="https://twitter.com/alisolankii">
                       <FontAwesomeIcon icon={faXTwitter} />
                     </a>
@@ -68,7 +68,7 @@ export default function Footer() {
               </div>
               <div className="col-xl-4 col-md-6 last">
                 <div className="site_info wow fadeInLeft" data-wow-delay="0.7s">
-                  <h5>Subscribe newsletter</h5>
+                  {/* <h5>Subscribe newsletter</h5>
                   <form action="#contact-section" className="subscribe_form">
                     <input
                       type="email"
@@ -80,7 +80,23 @@ export default function Footer() {
                       className="bg_btn_color"
                       value="Subscribe"
                     />
-                  </form>
+                  </form> */}
+                  {/* <h5>Subscribe newsletter</h5> */}
+                  {/* <form action="#contact-section" className="subscribe_form"> */}
+                    {/* <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Enter your email address"
+                    /> */}
+                    <button 
+                      type="submit"
+                      ahref="https://wa.me/+918850283085?text=Hey%21+I+have+a+requirement+for+MetaRizz+for+building+a"
+                      className="bg_btn_color"
+                      value="Contact Us"
+                    >
+                    Contact Us
+                    </button>
+                  {/* </form> */}
                 </div>
               </div>
             </div>

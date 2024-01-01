@@ -5,3 +5,17 @@
 li.mail a:hover {
     color: var(--red-dark-clr);
 }
+
+@media(max-width: 414px){
+    .cstm_main_footer_mob{
+      text-align: center;
+    }
+
+    .cstm_site_info_logo_area_414px{
+        padding-right: 10px !important;
+    }
+  
+    .cstm_social_icons_414px{
+        justify-content: center;
+    }
+  }

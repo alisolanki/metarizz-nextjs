@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import "./contactSection.css"
 
 export default function ContactSection() {
   const fadeInLeftVariant = {
@@ -53,7 +54,7 @@ export default function ContactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
               variants={fadeInLeftVariant}
-              className="map_area"
+              className="map_area cstm_map_area_414px"
             >
                 <div className="min_map">
                   <div className="mapouter">
