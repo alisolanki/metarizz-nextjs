@@ -86,10 +86,9 @@ export default function HeroSection() {
     <>
       <section className="hero_coporate_agency" id="#home">
         <div className="container">
-          <div className="content" style={{ display: "flex" }}>
+          <div className="content cstm_content_mob">
             <div
-              className="section_title"
-              style={{ textAlign: "left", width: "50%" }}
+              className="section_title cstm_sect_title_mob"
             >
               <motion.h1
                 className="hero_title"

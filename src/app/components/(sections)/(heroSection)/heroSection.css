@@ -9,3 +9,34 @@
   width: 40%;
   padding-left: 150px;
 }
+
+.cstm_content_mob{
+  display: flex;
+}
+
+@media(min-width: 768px){
+  .cstm_sect_title_mob{
+    text-align: left;
+    width: 50%;
+  }
+}
+
+/*Mobile optimization code*/
+
+@media(max-width: 414px){
+  .cstm_content_mob{
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+
+  .cstm_sect_title_mob{
+    text-align: center;
+  }
+
+  .cstm_mini_form {
+    width: 100%;
+    padding: 20px;
+  }
+
+}
