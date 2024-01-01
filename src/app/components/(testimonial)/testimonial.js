@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import "./testimonial.css";
 
 const fadeInRightVariant = {
   hidden: { opacity: 0, x: 50 },
@@ -18,8 +19,8 @@ export default function Testimonial() {
       {/* <!-- Testimonial --> */}
       <section className="testimonial">
         <div className="container">
-          <div className="min_testimonial_area" style={{ display: 'flex'}}>
-            <div className="single_testimonial" style={{ width: '50%'}}>
+          <div className="min_testimonial_area cstm_min_testimonial_1440px" >
+            <div className="single_testimonial cst_single_testimonial_1440px" >
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
               &quot;We’ve worked with multiple agencies in the past but they could
@@ -32,7 +33,7 @@ export default function Testimonial() {
                 <span className="des">Schbang for Kotak 811</span>
               </div>
             </div>
-            <div className="single_testimonial" style={{ width: '50%'}}>
+            <div className="single_testimonial cst_single_testimonial_1440px">
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
               &quot;Smooth communication, great work, and a very professional

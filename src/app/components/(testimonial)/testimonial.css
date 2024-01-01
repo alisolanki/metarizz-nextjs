@@ -1,0 +1,18 @@
+/* @media(max-width: 414px){
+    .cstm_min_testimonial_1440px{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cst_single_testimonial_1440px{
+        width:50%;
+    }
+} */
+
+.cstm_min_testimonial_1440px{
+    display: flex;
+}
+
+.cst_single_testimonial_1440px{
+    width: 50%;
+}
