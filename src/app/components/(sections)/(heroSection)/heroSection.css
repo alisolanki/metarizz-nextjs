@@ -27,7 +27,7 @@
   .cstm_content_mob{
     display: flex;
     flex-direction: column;
-    row-gap: 100px;
+    row-gap: 50px;
   }
 
   .cstm_sect_title_mob{

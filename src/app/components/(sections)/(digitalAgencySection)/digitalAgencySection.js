@@ -21,10 +21,9 @@ export default function DigitalAgencySection() {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="content">
+              <div className="content cstm_content_das_mob">
                 <div
-                  className="section_title wow fadeInLeft"
-                  data-wow-delay="0.3s"
+                  className="section_title"
                 >
                   <h2>We help you execute your ideas</h2>
                 </div>
