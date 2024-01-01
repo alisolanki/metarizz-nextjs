@@ -110,15 +110,14 @@ export default function HeroSection() {
             {/* Mini Form */}
           <div className="min_contact_area" style={{ width: '50%', paddingLeft: '20px' }}>
               <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
+                initial="initial"
+                animate="animate"
                 transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
                 className="section_title"
               >
                 <h2>
-                Let’s work together
+                Let&apos;s work together
                 </h2>
               </motion.div>
             <form onSubmit={handleMiniFormSubmit} className="contact_form">
@@ -131,10 +130,9 @@ export default function HeroSection() {
                 className="form-control input"
                 placeholder="Your full name"
                 style={{ marginBottom: '10px' }}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
               />
               <motion.input
@@ -145,10 +143,9 @@ export default function HeroSection() {
                 className="form-control input"
                 placeholder="Email address"
                 style={{ marginBottom: '10px' }}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
               />
               <motion.input
@@ -159,10 +156,9 @@ export default function HeroSection() {
                 className="form-control input"
                 placeholder="Phone Number"
                 style={{ marginBottom: '10px' }}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
               />
               <motion.select
@@ -171,10 +167,9 @@ export default function HeroSection() {
                 onChange={handleMiniFormChange}
                 className="form-control input"
                 style={{ marginBottom: '10px' }}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
               >
                 <option value="">Select Budget</option>
@@ -193,20 +188,18 @@ export default function HeroSection() {
                 placeholder="Enter Your Requirement"
                 rows="3"
                 style={{ marginBottom: '10px' }}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
               ></motion.textarea>
               <motion.input
                 type="submit"
                 className="bg_btn_color"
                 value="Send Message"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
               />
               </div>
