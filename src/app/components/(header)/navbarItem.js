@@ -9,7 +9,7 @@ export default function NavbarItem(props) {
         <a
           className="nav-link"
           id={props.active ? "active" : "not-active"}
-          href="#"
+          href={props.href || "#"}
           role="button"
           aria-expanded="false"
         >

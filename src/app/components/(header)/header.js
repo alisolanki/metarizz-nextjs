@@ -34,15 +34,15 @@ export default function Header() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav">
+              <ul className="navbar-nav"> 
                 <NavbarItem name="Home" active={false} />
-                <NavbarItem name="About Us" active={false} />
-                <NavbarItem name="Services" active={false} />
-                <NavbarItem name="Projects" active={false} />
-                <NavbarItem name="Blog" active={false} />
+                <NavbarItem name="About Us" active={false} href="#digital-agency"/>
+                <NavbarItem name="Services" active={false} href="#our-services"/>
+                <NavbarItem name="Projects" active={false} href="#projects-section"/>
+                {/* <NavbarItem name="Blog" active={false} /> */}
               </ul>
               <div className="nav_buttons">
-                <Link href="#contact-section" className="contact_btn">
+                <Link target="_blank" href="https://wa.me/+918850283085?text=Hey%21+I+have+a+requirement+for+MetaRizz+for+building+a" className="contact_btn">
                   Contact us
                 </Link>
               </div>

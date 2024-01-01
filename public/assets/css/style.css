@@ -1893,6 +1893,31 @@ a {
   line-height: 32px;
 }
 
+/* Power Section Styles */
+.power .row {
+  display: flex;
+  align-items: stretch; 
+}
+
+.power .section_img, 
+.power .power_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .power .row {
+    flex-direction: column;
+  }
+
+  .power .section_img, 
+  .power .power_content {
+    width: 100%;
+  }
+}
+
 .goal {
   padding-top: 20px;
   padding-bottom: 165px;

@@ -140,7 +140,7 @@ export default function ProjectsSlider() {
   return (
     <>
       {/* <!-- Project Slider Two --> */}
-      <section className="project_slider_two">
+      <section className="project_slider_two" id="projects-section">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
