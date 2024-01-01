@@ -141,7 +141,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 variants={fadeInRight}
                 className="section_title"
-                style={{ paddingBottom: "100px" }}
+                style={{ paddingBottom: "60px" }}
               >
                 <h2>Let&apos;s work together</h2>
               </motion.div>
