@@ -108,7 +108,7 @@ export default function HeroSection() {
               </motion.a>
             </div>
             {/* Mini Form */}
-          <div className="min_contact_area" style={{ width: '50%', paddingLeft: '20px' }}>
+          <div className="min_contact_area" style={{ width: '40%', paddingLeft: '150px' }}>
               <motion.div
                 initial="initial"
                 animate="animate"
@@ -120,7 +120,7 @@ export default function HeroSection() {
                 Let&apos;s work together
                 </h2>
               </motion.div>
-            <form onSubmit={handleMiniFormSubmit} className="contact_form">
+            <form onSubmit={handleMiniFormSubmit} className="contact_form_hero">
             <div className="row">
               <motion.input
                 type="text"

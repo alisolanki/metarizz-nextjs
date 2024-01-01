@@ -3666,6 +3666,51 @@ a {
   margin-top: 48px;
 }
 
+/* Contact form for hero section CSS */
+.min_contact_area .contact_form_hero {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between items */
+}
+
+.min_contact_area .contact_form_hero .input {
+  background-color: var(--white-translucent-clr);
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid var(--black-clr);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.min_contact_area .contact_form_hero .input:focus {
+  box-shadow: none;
+}
+
+.min_contact_area .contact_form_hero .input::placeholder {
+  color: var(--black-clr);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.min_contact_area .contact_form_hero .textarea {
+  color: var(--black-clr);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  height: 120px;
+  margin-top: 30px;
+  flex: 1;
+}
+
+.min_contact_area .contact_form_hero .bg_btn_color {
+  margin-top: 48px;
+  align-self: center;
+}
+
 .contact.h_5 {
   padding-top: 160px;
 }
