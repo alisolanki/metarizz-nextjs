@@ -9,6 +9,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import Link from 'next/link'
 
 import "./footer.css";
 
@@ -88,13 +89,13 @@ export default function Footer() {
                       className="form-control"
                       placeholder="Enter your email address"
                     /> */}
-                    <button 
-                      type="submit"
-                      ahref="https://wa.me/+918850283085?text=Hey%21+I+have+a+requirement+for+MetaRizz+for+building+a"
+                    <button
                       className="bg_btn_color"
                       value="Contact Us"
                     >
-                    Contact Us
+                    <Link target="_blank" className="cstm footer_contact_button" href="https://wa.me/+918850283085?text=Hey%21+I+have+a+requirement+for+MetaRizz+for+building+a">
+                      Contact us
+                    </Link>
                     </button>
                   {/* </form> */}
                 </div>
