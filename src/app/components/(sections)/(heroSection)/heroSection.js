@@ -132,8 +132,7 @@ export default function HeroSection() {
             </div>
             {/* Mini Form */}
             <div
-              className="min_contact_area"
-              style={{ width: "40%", paddingLeft: "150px" }}
+              className="min_contact_area cstm_mini_form"
             >
               <motion.div
                 initial="initial"

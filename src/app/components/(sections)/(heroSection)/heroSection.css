@@ -4,3 +4,8 @@
     line-height: normal !important;
   }
 }
+
+.cstm_mini_form {
+  width: 40%;
+  padding-left: 150px;
+}
