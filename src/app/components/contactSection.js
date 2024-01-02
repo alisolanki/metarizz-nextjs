@@ -80,7 +80,7 @@ export default function ContactSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
                 variants={fadeInLeftVariant}
                 className="section_title"
               >
@@ -102,7 +102,7 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
+                      transition={{  duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     />
                   </div>
@@ -117,7 +117,7 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     />
                   </div>
@@ -133,7 +133,7 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     />
                   </div>
@@ -147,7 +147,7 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     >
                       <option value="">Select Budget</option>
@@ -170,7 +170,7 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     ></motion.textarea>
                     <motion.input
@@ -180,7 +180,7 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     />
                   </div>
