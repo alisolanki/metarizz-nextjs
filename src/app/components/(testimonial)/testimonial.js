@@ -17,7 +17,7 @@ export default function Testimonial() {
   return (
     <>
       {/* <!-- Testimonial --> */}
-      <section className="testimonial">
+      <section className="testimonial cst_testimonial_mob">
         <div className="container">
           <div className="min_testimonial_area cstm_min_testimonial_1440px" >
             <div className="single_testimonial cst_single_testimonial_1440px" >
