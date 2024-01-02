@@ -23,3 +23,18 @@ img.logo {
 #not-active:hover {
     color: var(--red-light-clr);
 }
+
+@media(max-width: 414px){
+    .header_aria .navbar .navbar-collapse .nav_buttons .contact_btn{
+        display: block !important;
+    }
+
+    .header_aria .navbar .navbar-collapse .nav_buttons{
+        padding-left: 0px;
+    }
+
+    .cstm_contact_btn_mob{
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
