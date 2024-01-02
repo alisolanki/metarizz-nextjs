@@ -21,6 +21,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@fortawesome/react-fontawesome";
 import "@fortawesome/free-brands-svg-icons";
+import "../../public/assets/img/whatsapp_float_icon.png"; //For Whataspp Icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';//For Whataspp Icon
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';//For Whataspp Icon
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { GoogleTagManager } from '@next/third-parties/google'
 
@@ -82,6 +85,10 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={inter.className} data-scroll-animation="false">
         {children}
+        {/* WhatsApp Floating Button */}
+        <a href="https://wa.me/+918850283085?text=Hey%21+I+have+a+requirement+for+MetaRizz+for+building+a" target="_blank" className="whatsapp_float" title="Chat with us on WhatsApp">
+          {/* <img src="../../public/assets/img/whatsapp_float_icon.png" alt="W" /> */}<FontAwesomeIcon icon={faWhatsapp} size="2x" className="whatss_float_img"/>
+        </a>
       </body>
       <GoogleTagManager gtmId="GTM-PVX39Z5" />
     </html>
