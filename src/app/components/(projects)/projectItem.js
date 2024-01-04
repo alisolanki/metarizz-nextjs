@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,10 +18,12 @@ const ProjectItem = ({ id, image, title, tags, url, description }) => {
         <h2>
           <a href={url}>{title}</a>
         </h2>
-        <p style={{ color: 'white', fontWeight: 'bold' }}>{description}</p>
-        <a className="project_btn" href={url}>
-          View project <FontAwesomeIcon icon={faArrowRight} />
-        </a>
+        {/* <p style={{ color: 'white', fontWeight: 'bold' }}>{description}</p> */}
+        <Link legacyBehavior href={`/projects/${encodeURIComponent(id)}`}>
+          <a className="project_btn">
+            View project <FontAwesomeIcon icon={faArrowRight} />
+          </a>
+        </Link>
       </div>
     </div>
   );
