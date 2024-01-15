@@ -33,7 +33,7 @@ const projectsData = [
     image: "/assets/img/medinobel.png",
     title: "Medinobel",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://www.medinobel.com/",
     description: "Patient Doctor Appointment App"
   },{
     id: 4,
@@ -54,56 +54,56 @@ const projectsData = [
     image: "/assets/img/the_stripe_nft.png",
     title: "The Stripes NFT",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://www.youtube.com/playlist?list=PLwXSCBuwy1QuSccdzqB6coWYDhJCx-CRk",
     description: "The Stripes NFT minting Dapp"
   },{
     id: 7,
     image: "/assets/img/vega.png",
     title: "Vega Auto Website",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://vegaauto.com/",
     description: "Motor gear brand"
   },{
     id: 8,
     image: "/assets/img/watermelon_gang.png",
     title: "Watermelon Gang Creative Agency Website",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://thewatermelongang.com/",
     description: "An exceptional marketing agency"
   },{
     id: 9,
     image: "/assets/img/edtech_platform.png",
     title: "Ed-tech Platform",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://courses.alisolanki.com/",
     description: "Hands-on Courses"
   },{
     id: 10,
     image: "/assets/img/kasu_loyalty.png",
     title: "Kasu Loyalty",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://kasu-ui.vercel.app/",
     description: "Blockchain based loyalty program through $KASU tokens"
   },{
     id: 11,
     image: "/assets/img/helper_ai.png",
     title: "Helper AI Chrome Extension",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://helper-ai.alisolanki.com/",
     description: "Chrome Extension"
   },{
     id: 12,
     image: "/assets/img/kart_racing_league.png",
     title: "Kart Racing League Website",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://krl-ui.vercel.app/",
     description: "Blockchain game"
   },{
     id: 13,
     image: "/assets/img/typer_ai.png",
     title: "Typer AI webapp",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://typer-ai.vercel.app/",
     description: "Webapp"
   },
   // ... other projects to be added here ...
@@ -137,6 +137,18 @@ export default function ProjectsSlider() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  //For viweing 3 projects in one horzintal row viewport 
+  const chunkArray = (array, chunkSize) => {
+    const result = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      result.push(array.slice(i, i + chunkSize));
+    }
+    return result;
+  };
+  
+  const chunkedProjects = chunkArray(projectsData, 3);
+
   return (
     <>
       {/* <!-- Project Slider Two --> */}
@@ -181,11 +193,19 @@ export default function ProjectsSlider() {
           onSelect={handleSelect}
           className="custom_carousel"
         >
-          {projectsData.map((project) => (
-            <Carousel.Item key={project.id} interval={3000}>
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInLeftVariants}>
-                <ProjectItem {...project} />
-              </motion.div>
+          {chunkedProjects.map((projectGroup, groupIndex) => (
+            <Carousel.Item key={groupIndex} interval={3000}>
+              <div className="container">
+                <div className="row">
+                  {projectGroup.map((project) => (
+                    <div className="col-lg-4" key={project.id}>
+                      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInLeftVariants}>
+                        <ProjectItem {...project} />
+                      </motion.div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </Carousel.Item>
           ))}
           {/* {bootstrap.map((item) => (

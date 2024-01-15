@@ -41,8 +41,53 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta name='keywords' content='Metarizz, Tech Service Agency, Blockchain development, Software development, Android React native Development, Marketing, Ads'></meta>
+        <meta name='description' content='MetaRizz helps you right from Blockchain, AI, Web, Mobile App to complete infrastructure development. We design, develop, market to rizz up your digital presence.'></meta>
+        <meta name='subject' content='Agency'></meta>
+        <meta name='copyright' content='Metarizz'></meta>
+        <meta name='language' content='ES'></meta>
+        <meta name='robots' content='index,follow'></meta>
+        <meta name='revised' content='Thursday, January 4th, 2024, 5:15 pm'></meta>
+        <meta name='abstract' content='Agency Services'></meta>
+        <meta name='topic' content=''></meta>
+        <meta name='summary' content=''></meta>
+        <meta name='Classification' content='Business'></meta>
+        <meta name='author' content='Ali Solanki, inquire@metarizz.com'></meta>
+        <meta name='designer' content='Shafin Shaikh'></meta>
+        <meta name='reply-to' content='inquire@metarizz.com'></meta>
+        <meta name='owner' content=''></meta>
+        <meta name='url' content='https://metarizz.com/'></meta>
+        <meta name='identifier-URL' content='https://metarizz.com/'></meta>
+        <meta name='directory' content='submission'></meta>
+        <meta name='pagename' content='Metarizz Tech Agency - Ali Solanki Metarizz'></meta>
+        <meta name='category' content='Tech and Marketing Services'></meta>
+        <meta name='coverage' content='Worldwide'></meta>
+        <meta name='distribution' content='Global'></meta>
+        <meta name='rating' content='General'></meta>
+        <meta name='revisit-after' content='7 days'></meta>
+        <meta name='subtitle' content='This is my subtitle'></meta>
+        <meta name='target' content='all'></meta>
+        <meta name='HandheldFriendly' content='True'></meta>
+        <meta name='MobileOptimized' content='320'></meta>
+        <meta name='date' content='Sep. 27, 2010'></meta>
+        <meta name='search_date' content='2010-09-27'></meta>
+        <meta name='DC.title' content='Unstoppable Robot Ninja'></meta>
+        <meta name='ResourceLoaderDynamicStyles' content=''></meta>
+        <meta name='medium' content='blog'></meta>
+        <meta name='syndication-source' content='https://mashable.com/2008/12/24/free-brand-monitoring-tools/'></meta>
+        <meta name='original-source' content='https://mashable.com/2008/12/24/free-brand-monitoring-tools/'></meta>
+        <meta name='verify-v1' content='dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I='></meta>
+        <meta name='y_key' content='1e39c508e0d87750'></meta>
+        <meta name='pageKey' content='guest-home'></meta>
+        <meta itemprop='name' content='jQTouch'></meta>
+        <meta http-equiv='Expires' content='0'></meta>
+        <meta http-equiv='Pragma' content='no-cache'></meta>
+        <meta http-equiv='Cache-Control' content='no-cache'></meta>
+        <meta http-equiv='imagetoolbar' content='no'></meta>
+        <meta http-equiv='x-dns-prefetch-control' content='off'></meta>
+
         <title>MetaRizz Technologies | Design, Develop, Market</title>
         <link
           rel="icon"

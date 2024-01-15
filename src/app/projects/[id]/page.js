@@ -28,9 +28,8 @@ const projectsData = [
     image: "/assets/img/medinobel.png",
     title: "Medinobel",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
-    description: "This project encompasses an app that seamlessly connects users with doctors and hospitals, enabling them to book appointments, explore various health packages, and manage care efficiently.\\n\\nTech Stack:\\n- Frontend: Flutter, facilitating cross-platform app development from a single codebase and offering a comprehensive set of customizable widgets for native interfaces.\\n- Backend: Firebase, providing a real-time database for instant updates and synchronization across user devices, along with authentication services for secure user management.\\n\\nUser Experience:\\n- Intuitive UI/UX, emphasizing a user-friendly interface to simplify the booking process.\\n- Accessibility, ensuring the app's usability for individuals with disabilities.\\n\\nFeatures:\\nPatient Features:\\n- Profile Management for personal health record and appointment history.\\n- Search and Filter functionality to find doctors by specialty, location, or availability.\\nDoctor Features:\\n- Appointment Management for scheduling and patient appointments.\\n- Secure Access to patient histories for informed diagnoses.\\n\\nSecurity and Performance:\\n- Data Encryption to protect patient confidentiality.\\n- Caching Mechanisms for enhanced load speeds.\\n- Load Balancing for traffic distribution and consistent uptime.\\n\\nAnalytics and Improvement:\\n- User Analytics to track behavior and preferences.\\n- A Feedback System for user suggestions and improvements.\\n\\nMaintenance and Support:\\n- Regular Updates for bug fixes, security patches, and new features.\\n- Customer Support with a dedicated helpdesk for user issues.\\n\\nCompetition Analysis:\\n- Market Research to identify opportunities and understand competitor strategies.\\n- Unique Selling Proposition (USP) development to differentiate Medinobel from competitors like Practo.",
-
+    url: "https://www.medinobel.com/",
+    description: "Patient Doctor Appointment App"
   },{
     id: 4,
     image: "/assets/img/get_in_guestlist.png",
@@ -50,56 +49,56 @@ const projectsData = [
     image: "/assets/img/the_stripe_nft.png",
     title: "The Stripes NFT",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://www.youtube.com/playlist?list=PLwXSCBuwy1QuSccdzqB6coWYDhJCx-CRk",
     description: "The Stripes NFT minting Dapp"
   },{
     id: 7,
     image: "/assets/img/vega.png",
     title: "Vega Auto Website",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://vegaauto.com/",
     description: "Motor gear brand"
   },{
     id: 8,
     image: "/assets/img/watermelon_gang.png",
     title: "Watermelon Gang Creative Agency Website",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://thewatermelongang.com/",
     description: "An exceptional marketing agency"
   },{
     id: 9,
     image: "/assets/img/edtech_platform.png",
     title: "Ed-tech Platform",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://courses.alisolanki.com/",
     description: "Hands-on Courses"
   },{
     id: 10,
     image: "/assets/img/kasu_loyalty.png",
     title: "Kasu Loyalty",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://kasu-ui.vercel.app/",
     description: "Blockchain based loyalty program through $KASU tokens"
   },{
     id: 11,
     image: "/assets/img/helper_ai.png",
     title: "Helper AI Chrome Extension",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://helper-ai.alisolanki.com/",
     description: "Chrome Extension"
   },{
     id: 12,
     image: "/assets/img/kart_racing_league.png",
     title: "Kart Racing League Website",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://krl-ui.vercel.app/",
     description: "Blockchain game"
   },{
     id: 13,
     image: "/assets/img/typer_ai.png",
     title: "Typer AI webapp",
     tags: ["Branding", "UI/UX", "Development"],
-    url: "https://imbuzi.in/",
+    url: "https://typer-ai.vercel.app/",
     description: "Webapp"
   },
   // ... other projects to be added here ...
@@ -119,7 +118,7 @@ export default function ProjectDetails({ params }) {
     return <p>Loading...</p>; // Might replace with Loader.js
   }
 
-  return (
+  return (  
     <>
       <Header />
       <div className="breadcrumb_area two" data-bg-color="#F5DB6E">

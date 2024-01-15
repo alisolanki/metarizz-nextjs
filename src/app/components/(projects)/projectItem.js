@@ -14,17 +14,19 @@ const ProjectItem = ({ id, image, title, tags, url, description }) => {
           </li>
         ))}
       </ul> */}
-      <div className="project_bottom">
+      {/* <div className="project_bottom"> */}
+        <div className="project_title cstm_project_title">
         <h2>
-          <a href={url}>{title}</a>
+          <a href={url} classname="cstm_a_color">{title}</a>
         </h2>
+        </div>
         {/* <p style={{ color: 'white', fontWeight: 'bold' }}>{description}</p> */}
-        <Link legacyBehavior href={`/projects/${encodeURIComponent(id)}`}>
-          <a className="project_btn">
+        <Link legacyBehavior href={url}>
+          <a className="bg_btn_color project_btn">
             View project <FontAwesomeIcon icon={faArrowRight} />
           </a>
         </Link>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
