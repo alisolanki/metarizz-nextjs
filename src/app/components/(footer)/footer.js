@@ -108,29 +108,29 @@ export default function Footer() {
                 <div className="col-xl-6">
                   <ul className="footer_nav list-unstyled">
                     <li>
-                      <a href="portfolio-2-column.html">Portfolio</a>
+                      <a href="#projects-section">Portfolio</a>
                     </li>
                     <li>
-                      <a href="team.html">our team</a>
+                      <a href="#digital-agency">Our Team</a>
                     </li>
                     <li>
-                      <a href="pricing.html">pricing plan</a>
+                      <a href="#contact-section">Pricing Plan</a>
                     </li>
                     <li>
-                      <a href="service.html">Services</a>
+                      <a href="#our-services">Services</a>
                     </li>
                     <li>
-                      <a href="#contact-section">contact us</a>
+                      <a href="#contact-section">Contact Us</a>
                     </li>
                   </ul>
                 </div>
                 <div className="col-xl-6">
                   <ul className="footer_nav right list-unstyled">
                     <li>
-                      <a href="contact.html">Terms & conditions</a>
+                      <a href="#digital-agency">Terms & conditions</a>
                     </li>
                     <li>
-                      <a href="contact.html">privacy policy</a>
+                      <a href="#digital-agency">privacy policy</a>
                     </li>
                   </ul>
                 </div>
