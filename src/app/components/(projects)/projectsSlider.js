@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./projectsSlider.css";
@@ -138,6 +138,22 @@ export default function ProjectsSlider() {
     setIndex(selectedIndex);
   };
 
+  //For tracking mobile view and rendering default bootstrap component instead of 3 chunks
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const checkMobileView = () => {
+      setIsMobileView(window.innerWidth <= 767);
+    };
+
+    checkMobileView();
+    window.addEventListener('resize', checkMobileView);
+
+    return () => {
+      window.removeEventListener('resize', checkMobileView);
+    };
+  }, []);
+
   //For viweing 3 projects in one horzintal row viewport 
   const chunkArray = (array, chunkSize) => {
     const result = [];
@@ -193,7 +209,16 @@ export default function ProjectsSlider() {
           onSelect={handleSelect}
           className="custom_carousel"
         >
-          {chunkedProjects.map((projectGroup, groupIndex) => (
+          {isMobileView ? (
+            // Mobile view: Render single item per slide
+            projectsData.map((project) => (
+              <Carousel.Item key={project.id}>
+                <ProjectItem {...project} />
+              </Carousel.Item>
+            ))
+          ) : (
+            // Desktop view: Render chunked items per slide
+            chunkedProjects.map((projectGroup, groupIndex) => (
             <Carousel.Item key={groupIndex} interval={3000}>
               <div className="container">
                 <div className="row">
@@ -207,6 +232,7 @@ export default function ProjectsSlider() {
                 </div>
               </div>
             </Carousel.Item>
+            )
           ))}
           {/* {bootstrap.map((item) => (
             <Carousel.Item

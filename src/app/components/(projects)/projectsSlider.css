@@ -122,9 +122,12 @@ a{
   background-color: black;
 }
 
-.carousel-indicators{
-  margin-bottom: -100px !important;
+@media (min-width: 414px) {
+  .carousel-indicators{
+    margin-bottom: -100px !important;
+  }
 }
+
 
 #projects-section > div.custom_carousel.carousel.slide > div.carousel-inner{
   text-align: center;
