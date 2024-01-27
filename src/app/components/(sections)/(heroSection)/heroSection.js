@@ -244,7 +244,7 @@ export default function HeroSection() {
                     to you within 1 day.
                   </p>
                   <button onClick={resetForm} className="bg_btn_color">
-                    Click here to submit another response
+                    Submit Form Again
                   </button>
                 </div>
               )}
