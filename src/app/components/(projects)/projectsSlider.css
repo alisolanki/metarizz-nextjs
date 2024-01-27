@@ -122,7 +122,7 @@ a{
   background-color: black;
 }
 
-@media (min-width: 767px) { //Fixing issue of carousel indicators position
+@media (min-width: 767px) { /*Fixing issue of carousel indicators*/
   .carousel-indicators{
     margin-bottom: -100px !important;
   }
