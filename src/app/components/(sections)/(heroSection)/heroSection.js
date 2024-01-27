@@ -183,7 +183,7 @@ export default function HeroSection() {
                       value={miniFormData.phoneNumber}
                       onChange={handleMiniFormChange}
                       className="form-control input"
-                      placeholder="Phone Number"
+                      placeholder="(+91-) Phone Number"
                       style={{ marginBottom: "10px" }}
                       initial="initial"
                       animate="animate"
