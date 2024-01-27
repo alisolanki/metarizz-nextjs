@@ -140,7 +140,7 @@ a{
     height: 500px;
   }
   .carousel_img {
-    height: 500px;
+    height: 300px; /*Reducing carousel image size*/
   }
   .tag_btn{
     padding: 5px 15px;
