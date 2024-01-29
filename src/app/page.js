@@ -75,7 +75,7 @@ export default function Home() {
       {/* <!-- Slick-Slidr-js --> */}
       <script src="assets/js/slick.min.js" async></script>
       {/* <!-- Magnet-mouse --> */}
-      <script src="assets/js/magnet-mouse.min.js" async></script>
+      {/* <script src="assets/js/magnet-mouse.min.js" async></script> */}
       {/* <!-- jquery-ui --> */}
       <script src="assets/js/jquery-ui.js" async></script>
       {/* <!-- Main Js --> */}

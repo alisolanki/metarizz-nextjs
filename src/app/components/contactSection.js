@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import "./contactSection.css"
+import Loader from "./(sections)/(heroSection)/Loader";
 
 export default function ContactSection() {
   const fadeInLeftVariant = {
@@ -10,13 +11,29 @@ export default function ContactSection() {
     visible: { opacity: 1, x: 0 }
   };
 
+  // State variables for loading and submission
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   //code to send data of form to Notion Page via API
+  const resetForm = () => {
+    setIsSubmitted(false);
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+      phoneNumber: '',
+      budget: ''
+    });
+  };
+
+  // Mini form state and handlers
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    phoneNumber: '',
-    budget: ''
+    name: "",
+    email: "",
+    message: "",
+    phoneNumber: "",
+    budget: "",
   });
 
   const handleChange = (e) => {
@@ -25,6 +42,7 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const response = await fetch('/api/submit', {
       method: 'POST',
       headers: {
@@ -34,12 +52,14 @@ export default function ContactSection() {
     });
     
     const data = await response.json();
+    setIsLoading(false);
+
     if (response.ok) {
       // Handle success
-      alert('Form submitted successfully', data);
+      setIsSubmitted(true);
     } else {
       // Handle error
-      alert('Form submission error', data);
+      alert("Form submission error", data);
     }
   };
 
@@ -89,6 +109,8 @@ export default function ContactSection() {
                   <br /> Let’s work <br /> together
                 </h2>
               </motion.div>
+              {isLoading && <Loader />}
+              {!isLoading && !isSubmitted && (
               <form onSubmit={handleSubmit} className="contact_form">
                 <div className="row">
                   <div className="col-lg-6">
@@ -129,7 +151,7 @@ export default function ContactSection() {
                       value={formData.phoneNumber}
                       onChange={handleChange}
                       className="form-control input"
-                      placeholder="Phone Number"
+                      placeholder="(+91-) Phone Number"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
@@ -186,6 +208,19 @@ export default function ContactSection() {
                   </div>
                 </div>
               </form>
+              )}
+
+              {!isLoading && isSubmitted && (
+                <div className="success-message">
+                  <p>
+                    Congratulations! Your form is submitted. We will reach out
+                    to you within 1 day.
+                  </p>
+                  <button onClick={resetForm} className="bg_btn_color">
+                    Submit Form Again
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>

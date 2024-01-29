@@ -17,7 +17,7 @@ const ProjectItem = ({ id, image, title, tags, url, description }) => {
       {/* <div className="project_bottom"> */}
         <div className="project_title cstm_project_title">
         <h2>
-          <a href={url} classname="cstm_a_color">{title}</a>
+          <a href={url} className="cstm_a_color">{title}</a>
         </h2>
         </div>
         {/* <p style={{ color: 'white', fontWeight: 'bold' }}>{description}</p> */}
