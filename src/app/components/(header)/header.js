@@ -1,10 +1,16 @@
+"use client";
 import React from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import NavbarItem from "./navbarItem";
+import Link from 'next/link'
 import "./header.css";
 
 export default function Header() {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
     <>
       {/* <!-- Header Section --> */}
@@ -24,26 +30,27 @@ export default function Header() {
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
-              aria-expanded="false"
+              aria-expanded={!isNavCollapsed ? true : false}
               aria-label="Toggle navigation"
+              onClick={handleNavCollapse}
             >
               <FontAwesomeIcon icon={faBars} style={{ color: "black" }} />
             </button>
             <div
-              className="collapse navbar-collapse"
+              className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav">
-                <NavbarItem name="Home" active={false} />
-                <NavbarItem name="About Us" active={false} />
-                <NavbarItem name="Services" active={false} />
-                <NavbarItem name="Projects" active={false} />
-                <NavbarItem name="Blog" active={false} />
+              <ul className="navbar-nav"> 
+                <NavbarItem name="Home" active={false} onClick={handleNavCollapse} />
+                <NavbarItem name="About Us" active={false} href="#digital-agency" onClick={handleNavCollapse}/>
+                <NavbarItem name="Services" active={false} href="#our-services" onClick={handleNavCollapse}/>
+                <NavbarItem name="Projects" active={false} href="#projects-section" onClick={handleNavCollapse}/>
+                {/* <NavbarItem name="Blog" active={false} /> */}
               </ul>
-              <div className="nav_buttons">
-                <a href="contact.html" className="contact_btn">
+              <div className="nav_buttons cstm_nav_buttons">
+                <Link target="_blank" href="https://wa.me/+918850283085?text=Hey%21+I+have+a+requirement+for+MetaRizz+for+building+a" className="contact_btn cstm_contact_btn_mob">
                   Contact us
-                </a>
+                </Link>
               </div>
             </div>
           </div>

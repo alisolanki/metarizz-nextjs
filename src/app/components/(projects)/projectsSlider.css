@@ -57,7 +57,20 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%); */
+}
+
+.project_content {
+  text-align: center; /* Centers content horizontally */
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Centers content horizontally */
+  width: 100%; /* Ensures the content takes full width of its parent */
+}
+
+.project_title {
+  margin-bottom: 10px; /* Space between title and button */
 }
 
 .project_bottom a {
@@ -86,14 +99,61 @@
   box-shadow: none;
 }
 
+a{
+  color: black !important;
+}
+
+.cstm_project_title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#projects-section > div.custom_carousel.carousel.slide > a.carousel-control-prev > span.carousel-control-prev-icon{
+  background-color: black;
+  border-radius: 15px;
+}
+
+#projects-section > div.custom_carousel.carousel.slide > a.carousel-control-next > span.carousel-control-next-icon{
+  background-color: black;
+  border-radius: 15px;
+}
+
+.carousel-indicators [data-bs-target]{
+  background-color: black;
+}
+
+@media (min-width: 767px) { /*Fixing issue of carousel indicators*/
+  .carousel-indicators{
+    margin-bottom: -100px !important;
+  }
+}
+
+
+#projects-section > div.custom_carousel.carousel.slide > div.carousel-inner{
+  text-align: center;
+}
+
+
+
 @media(max-width: 767px) {
   .custom_carousel {
     height: 500px;
   }
   .carousel_img {
-    height: 500px;
+    height: 300px; /*Reducing carousel image size*/
   }
   .tag_btn{
     padding: 5px 15px;
+  }
+}
+
+@media(max-width: 414px){
+  .cstm_projectsslider_title_button{
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .cstm_projectsslider_title_button_inside{
+    text-align: center !important;
   }
 }

@@ -2,6 +2,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import "./serviceSection.css";
 
 export default function ServiceSection() {
   return (
@@ -27,7 +28,7 @@ export default function ServiceSection() {
                     Right from brand design to UI/UX we cover everything to help
                     you bring your ideas to life!
                   </p>
-                  <a href="single-service.html" className="text_btn">
+                  <a href="#projects-section" className="text_btn">
                     Learn more <FontAwesomeIcon icon={faArrowRight} />
                   </a>
                 </div>
@@ -46,7 +47,7 @@ export default function ServiceSection() {
                     Blockchain, AI, Web Development, Mobile App Development,
                     Custom Infrastructure
                   </p>
-                  <a href="single-service.html" className="text_btn">
+                  <a href="#projects-section" className="text_btn">
                     Learn more <FontAwesomeIcon icon={faArrowRight} />
                   </a>
                 </div>
@@ -65,7 +66,7 @@ export default function ServiceSection() {
                     Management, Influencer Marketing, UGC ads and even Video
                     Production
                   </p>
-                  <a href="single-service.html" className="text_btn">
+                  <a href="#contact-section" className="text_btn">
                     Learn more <FontAwesomeIcon icon={faArrowRight} />
                   </a>
                 </div>

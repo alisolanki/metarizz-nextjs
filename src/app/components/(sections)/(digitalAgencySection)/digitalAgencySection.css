@@ -5,3 +5,10 @@
 .section-img {
     margin: 100px;
 }
+
+@media(max-width: 414px){
+    .cstm_content_das_mob{
+        text-align: center;
+    }
+  
+  }

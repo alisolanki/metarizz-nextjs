@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import "./testimonial.css";
 
 const fadeInRightVariant = {
   hidden: { opacity: 0, x: 50 },
@@ -16,10 +17,10 @@ export default function Testimonial() {
   return (
     <>
       {/* <!-- Testimonial --> */}
-      <section className="testimonial">
+      <section className="testimonial cst_testimonial_mob">
         <div className="container">
-          <div className="min_testimonial_area">
-            <div className="single_testimonial">
+          <div className="min_testimonial_area cstm_min_testimonial_1440px" >
+            <div className="single_testimonial cst_single_testimonial_1440px" >
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
               &quot;We’ve worked with multiple agencies in the past but they could
@@ -32,7 +33,7 @@ export default function Testimonial() {
                 <span className="des">Schbang for Kotak 811</span>
               </div>
             </div>
-            <div className="single_testimonial">
+            <div className="single_testimonial cst_single_testimonial_1440px">
               <img src="assets/img/testimonial/icon.png" alt="" />
               <p>
               &quot;Smooth communication, great work, and a very professional
@@ -46,7 +47,7 @@ export default function Testimonial() {
             </div>
           </div>
         </div>
-        <div className="shape_img">
+        {/* <div className="shape_img">
           <motion.img
               src="assets/img/testimonial/shape/1.png"
               alt=""
@@ -67,7 +68,7 @@ export default function Testimonial() {
               variants={fadeInLeftVariant}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
-        </div>
+        </div> */}
       </section>
       {/* <!-- Testimonial --> */}
     </>

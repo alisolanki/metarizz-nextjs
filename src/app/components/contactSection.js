@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import "./contactSection.css"
+import Loader from "./(sections)/(heroSection)/Loader";
 
 export default function ContactSection() {
   const fadeInLeftVariant = {
@@ -9,11 +11,29 @@ export default function ContactSection() {
     visible: { opacity: 1, x: 0 }
   };
 
+  // State variables for loading and submission
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   //code to send data of form to Notion Page via API
+  const resetForm = () => {
+    setIsSubmitted(false);
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+      phoneNumber: '',
+      budget: ''
+    });
+  };
+
+  // Mini form state and handlers
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
+    phoneNumber: "",
+    budget: "",
   });
 
   const handleChange = (e) => {
@@ -22,7 +42,7 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Post data to the API
+    setIsLoading(true);
     const response = await fetch('/api/submit', {
       method: 'POST',
       headers: {
@@ -31,19 +51,20 @@ export default function ContactSection() {
       body: JSON.stringify(formData),
     });
     
-    // Handle response here
     const data = await response.json();
+    setIsLoading(false);
+
     if (response.ok) {
       // Handle success
-      alert('Form submitted successfully', data);
+      setIsSubmitted(true);
     } else {
       // Handle error
-      alert('Form submission error', data);
+      alert("Form submission error", data);
     }
   };
 
   return (
-    <section className="contact h_5">
+    <section className="contact h_5" id="contact-section">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
@@ -53,7 +74,7 @@ export default function ContactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
               variants={fadeInLeftVariant}
-              className="map_area"
+              className="map_area cstm_map_area_414px"
             >
                 <div className="min_map">
                   <div className="mapouter">
@@ -79,7 +100,7 @@ export default function ContactSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
                 variants={fadeInLeftVariant}
                 className="section_title"
               >
@@ -88,6 +109,8 @@ export default function ContactSection() {
                   <br /> Let’s work <br /> together
                 </h2>
               </motion.div>
+              {isLoading && <Loader />}
+              {!isLoading && !isSubmitted && (
               <form onSubmit={handleSubmit} className="contact_form">
                 <div className="row">
                   <div className="col-lg-6">
@@ -101,7 +124,7 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.5 }}
+                      transition={{  duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     />
                   </div>
@@ -116,9 +139,47 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.7 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     />
+                  </div>
+                  <div className="col-lg-6">
+                    {/* Phone Number Field */}
+                    <motion.input
+                      type="tel"
+                      name="phoneNumber" 
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
+                      className="form-control input"
+                      placeholder="(+91-) Phone Number"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
+                      variants={fadeInLeftVariant}
+                    />
+                  </div>
+                  <div className="col-lg-6">
+                    {/* Budget Field */}
+                    <motion.select
+                      name="budget" 
+                      value={formData.budget}
+                      onChange={handleChange}
+                      className="form-control input"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
+                      variants={fadeInLeftVariant}
+                    >
+                      <option value="">Select Budget</option>
+                      <option value="10000+">$10000+</option>
+                      <option value="5000-10000">$5000 to $10000</option>
+                      <option value="2500-5000">$2500 to $5000</option>
+                      <option value="1500-2500">$1500 to $2500</option>
+                      <option value="1000-1500">$1000 to $1500</option>
+                      <option value="0-1000">$0 to $1000</option>
+                    </motion.select>
                   </div>
                   <div className="col-lg-12">
                     <motion.textarea
@@ -127,11 +188,11 @@ export default function ContactSection() {
                       value={formData.message}
                       onChange={handleChange}
                       className="form-control input textarea"
-                      placeholder="Enter your message"
+                      placeholder="Enter your requirement"
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.9 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     ></motion.textarea>
                     <motion.input
@@ -141,12 +202,25 @@ export default function ContactSection() {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 1.1 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                       variants={fadeInLeftVariant}
                     />
                   </div>
                 </div>
               </form>
+              )}
+
+              {!isLoading && isSubmitted && (
+                <div className="success-message">
+                  <p>
+                    Congratulations! Your form is submitted. We will reach out
+                    to you within 1 day.
+                  </p>
+                  <button onClick={resetForm} className="bg_btn_color">
+                    Submit Form Again
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>

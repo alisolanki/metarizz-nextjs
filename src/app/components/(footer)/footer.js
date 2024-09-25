@@ -9,6 +9,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import Link from 'next/link'
 
 import "./footer.css";
 
@@ -18,11 +19,16 @@ export default function Footer() {
       {/* <!-- Footer --> */}
       <footer className="footer">
         <div className="container">
-          <div className="main_footer">
+          <div className="main_footer cstm_main_footer_mob">
             <div className="row">
               <div className="col-xl-5 col-md-6">
                 <div
+<<<<<<< HEAD
                   className="site_info logo_area"
+=======
+                  className="site_info logo_area cstm_site_info_logo_area_414px wow fadeInLeft"
+                  data-wow-delay="0.3s"
+>>>>>>> fork/main
                 >
                   <img
                     src="assets/img/logo/metarizz_logo.svg"
@@ -33,14 +39,14 @@ export default function Footer() {
                     We are focused on providing the best digital services to our
                     clients. Contact us for more information.
                   </p>
-                  <div className="social_icons">
-                    <a href="https://twitter.com/">
+                  <div className="social_icons cstm_social_icons_414px">
+                    <a href="https://twitter.com/alisolankii">
                       <FontAwesomeIcon icon={faXTwitter} />
                     </a>
-                    <a href="https://instagram.com/meta.rizz">
+                    <a href="https://www.instagram.com/meta.rizz/">
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
-                    <a href="https://bd.linkedin.com/">
+                    <a href="https://linkedin.com/in/alisolanki">
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
                   </div>
@@ -66,9 +72,15 @@ export default function Footer() {
                 </div>
               </div>
               <div className="col-xl-4 col-md-6 last">
+<<<<<<< HEAD
                 <div className="site_info" >
                   <h5>Subscribe newsletter</h5>
                   <form action="#" className="subscribe_form">
+=======
+                <div className="site_info wow fadeInLeft" data-wow-delay="0.7s">
+                  {/* <h5>Subscribe newsletter</h5>
+                  <form action="#contact-section" className="subscribe_form">
+>>>>>>> fork/main
                     <input
                       type="email"
                       className="form-control"
@@ -79,7 +91,23 @@ export default function Footer() {
                       className="bg_btn_color"
                       value="Subscribe"
                     />
-                  </form>
+                  </form> */}
+                  {/* <h5>Subscribe newsletter</h5> */}
+                  {/* <form action="#contact-section" className="subscribe_form"> */}
+                    {/* <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Enter your email address"
+                    /> */}
+                    <button
+                      className="bg_btn_color"
+                      value="Contact Us"
+                    >
+                    <Link target="_blank" className="cstm footer_contact_button" href="https://wa.me/+918850283085?text=Hey%21+I+have+a+requirement+for+MetaRizz+for+building+a">
+                      Contact us
+                    </Link>
+                    </button>
+                  {/* </form> */}
                 </div>
               </div>
             </div>
@@ -90,29 +118,29 @@ export default function Footer() {
                 <div className="col-xl-6">
                   <ul className="footer_nav list-unstyled">
                     <li>
-                      <a href="portfolio-2-column.html">Portfolio</a>
+                      <a href="#projects-section">Portfolio</a>
                     </li>
                     <li>
-                      <a href="team.html">our team</a>
+                      <a href="#digital-agency">Our Team</a>
                     </li>
                     <li>
-                      <a href="pricing.html">pricing plan</a>
+                      <a href="#contact-section">Pricing Plan</a>
                     </li>
                     <li>
-                      <a href="service.html">Services</a>
+                      <a href="#our-services">Services</a>
                     </li>
                     <li>
-                      <a href="contact.html">contact us</a>
+                      <a href="#contact-section">Contact Us</a>
                     </li>
                   </ul>
                 </div>
                 <div className="col-xl-6">
                   <ul className="footer_nav right list-unstyled">
                     <li>
-                      <a href="contact.html">Terms & conditions</a>
+                      <a href="#digital-agency">Terms & conditions</a>
                     </li>
                     <li>
-                      <a href="contact.html">privacy policy</a>
+                      <a href="#digital-agency">privacy policy</a>
                     </li>
                   </ul>
                 </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./powerSection.css";
 
 export default function PowerSection() {
   return (
@@ -9,11 +10,11 @@ export default function PowerSection() {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="section_img wow fadeInLeft" data-wow-delay="0.1s">
-                <img src="assets/img/power.png" alt="" />
+                <img src="assets/img/our_expertise.jpg" alt="" style={{ }}/>
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="power_content">
+              <div className="power_content cstm_power_content">
                 <div className="section_title">
                   <h2 className="wow fadeInLeft" data-wow-delay="0.3s">
                     Our Expertise, <br />
