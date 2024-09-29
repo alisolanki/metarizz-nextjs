@@ -43,25 +43,43 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const response = await fetch('/api/submit', {
-      method: 'POST',
+    const response = await fetch("/api/submit", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
-    
+
     const data = await response.json();
     setIsLoading(false);
+    
 
-    if (response.ok) {
-      // Handle success
-      setIsSubmitted(true);
-    } else {
-      // Handle error
-      alert("Form submission error", data);
-    }
+    e.preventDefault();
+  
+    // Extract form data
+    const { name, phoneNumber, budget, message } = formData;
+  
+    // Construct the WhatsApp URL with encoded parameters
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+918850283085&text=${encodeURIComponent(
+      `Hello, My name is ${name}. I am interested in a project with a budget of ${budget}. Here are the details: ${message}`
+    )}`;
+  
+    // Open WhatsApp chat in a new tab
+    window.open(whatsappUrl, "_blank");
+  
+    // Optional: If needed, you can reset the form here
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+      phoneNumber: "",
+      budget: "",
+    });
+
+    
   };
+
 
   return (
     <section className="contact h_5" id="contact-section">

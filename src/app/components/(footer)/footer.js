@@ -23,12 +23,7 @@ export default function Footer() {
             <div className="row">
               <div className="col-xl-5 col-md-6">
                 <div
-<<<<<<< HEAD
                   className="site_info logo_area"
-=======
-                  className="site_info logo_area cstm_site_info_logo_area_414px wow fadeInLeft"
-                  data-wow-delay="0.3s"
->>>>>>> fork/main
                 >
                   <img
                     src="assets/img/logo/metarizz_logo.svg"
@@ -72,26 +67,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="col-xl-4 col-md-6 last">
-<<<<<<< HEAD
                 <div className="site_info" >
-                  <h5>Subscribe newsletter</h5>
-                  <form action="#" className="subscribe_form">
-=======
-                <div className="site_info wow fadeInLeft" data-wow-delay="0.7s">
-                  {/* <h5>Subscribe newsletter</h5>
-                  <form action="#contact-section" className="subscribe_form">
->>>>>>> fork/main
-                    <input
-                      type="email"
-                      className="form-control"
-                      placeholder="Enter your email address"
-                    />
-                    <input
-                      type="submit"
-                      className="bg_btn_color"
-                      value="Subscribe"
-                    />
-                  </form> */}
                   {/* <h5>Subscribe newsletter</h5> */}
                   {/* <form action="#contact-section" className="subscribe_form"> */}
                     {/* <input
