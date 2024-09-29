@@ -140,7 +140,7 @@ export default function ProjectDetails({ params }) {
 
   return (  
     <>
-   , height: '100vh'   <Header />
+   <Header />
       <div className="breadcrumb_area two" data-bg-color="#F5DB6E">
         <div className="container">
           <div className="breadcrumb_content">
