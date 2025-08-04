@@ -113,10 +113,10 @@ export default function Footer() {
                 <div className="col-xl-6">
                   <ul className="footer_nav right list-unstyled">
                     <li>
-                      <a href="#digital-agency">Terms & conditions</a>
+                      <a href="/privacy-policy">Terms & conditions</a>
                     </li>
                     <li>
-                      <a href="#digital-agency">privacy policy</a>
+                      <a href="/privacy-policy">privacy policy</a>
                     </li>
                   </ul>
                 </div>
